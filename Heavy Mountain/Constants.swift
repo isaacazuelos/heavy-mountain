@@ -22,9 +22,11 @@ struct GameConstants {
     static let cloudBackground = "world-2-bg.png"
     static let ballName = "ball.png"
     // MARK: - Sounds
+    static let musicPlaybackMultiplier: Float = 1.0
     static let testTrack = "testTrack.mp3"
     // MARK: - Physics
-    static let gravityStrength: CGFloat = -2
-    static let playerImpulse: CGFloat = 0.7
+    static let gravityStrength: CGFloat = -1
+    static let playerImpulseVertical: CGFloat = 0.05
+    static let playerImpulseHorizontal: CGFloat = 0.2
     static let playerFiction: CGFloat = 10
 }

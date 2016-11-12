@@ -52,13 +52,15 @@ class Player: Sprite {
     }
     
     func update(with delta: TimeInterval, and keys: Set<Key>) {
-        let impulse = GameConstants.playerImpulse
+
+        var impulse = GameConstants.playerImpulseVertical
         if keys.contains(Key.up) && !keys.contains(Key.down){
             self.physicsBody?.applyImpulse(CGVector(dx:0.0, dy:impulse))
         }
         if keys.contains(Key.down) && !keys.contains(Key.up) {
             self.physicsBody?.applyImpulse(CGVector(dx:0.0, dy:-impulse))
         }
+        impulse = GameConstants.playerImpulseHorizontal
         if keys.contains(Key.right) && !keys.contains(Key.left) {
             self.physicsBody?.applyImpulse(CGVector(dx:impulse, dy:0))
         }

@@ -14,7 +14,9 @@ class GameScene: SKScene {
     static let panUpBoundry: CGFloat = 300.0
     static let panDownBoundry: CGFloat = 50.0
     
+    // the time of the last frame, used to compute the deltas
     let lastTime: TimeInterval = 0.0
+    let music = MusicPlayer()
     // our world node, which we pan to move the world relative to the camera/scene
     let world = World()
     // our hud node, which is fixed relative to the scene
@@ -34,6 +36,9 @@ class GameScene: SKScene {
         
         // Collisions don't really happen in the hud, so we'll make the delegate the world.
         self.physicsWorld.contactDelegate = world
+        
+        self.music.playerPositionDelegate = world
+        self.music.start()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -59,6 +64,7 @@ class GameScene: SKScene {
     
     override func mouseDown(with event: NSEvent) {
         let pos = event.location(in: world)
+        print("clicked at: \(pos)")
         world.mouseDown(with: event)
     }
 }

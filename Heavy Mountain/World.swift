@@ -89,6 +89,13 @@ class World: SKNode {
 
 extension World: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
-        print("contact: \(contact)")
+        let obstacle = contact.bodyA.node?.name == "obstacle" ? contact.bodyA.node : contact.bodyB.node
+        
+    }
+}
+
+extension World: PlayerPositionDelegate {
+    var playerPosition: CGPoint {
+        return player?.position ?? .zero
     }
 }
