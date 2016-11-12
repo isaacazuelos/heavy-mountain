@@ -10,32 +10,57 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-
-    var mountain: BackgroundSprite!
+    
+    let lastTime: TimeInterval = 0.0
+    // our world node, which we pan to move the world relative to the camera/scene
+    let world = World()
+    // our hud node, which is fixed relative to the scene
+    let hud = SKNode()
+    
+    var keysPressed = Set<Key>()
+    
+//    let player = Player(position: CGPoint(x:120, y:120))
     
     override func willMove(from view: SKView) {
         size = CGSize(width: GameConstants.pixelWidth, height: GameConstants.pixelHeight)
     }
-    
     override func didMove(to view: SKView) {
         anchorPoint = .zero
         scaleMode = .fill
         self.size = GameConstants.sceneSize
+    
+        self.addChild(world)
+        self.addChild(hud)
         
-        mountain = BackgroundSprite(imageNamed: GameConstants.mountainImageName)
-        self.addChild(mountain)
+        world.player = Player(position: CGPoint(x:120, y:120))
+        
+        let mountain = BackgroundSprite(imageNamed: GameConstants.mountainImageName)
+        mountain.name = "mountain"
+        world.addChild(mountain)
     }
-    
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        let delta = currentTime - lastTime
+        world.update(with: delta, and: keysPressed)
     }
     
+    // MARK: - Inputs
     override func keyDown(with event: NSEvent) {
-        switch event.keyCode {
-        case 0: // 'a'
-            print(self.size)
-        default:
-            print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
+        let keyCode = event.keyCode
+        if let key = Key(rawValue: keyCode) {
+            keysPressed = keysPressed.union([key])
+        } else {
+            print("unknown key pressed: \(event)")
         }
+    }
+    
+    override func keyUp(with event: NSEvent) {
+        if let key = Key(rawValue: event.keyCode) {
+            keysPressed.remove(key)
+        }
+    }
+    
+    override func mouseDown(with event: NSEvent) {
+        let pos = event.location(in: self)
+        print("click at: \(pos)")
     }
 }
