@@ -8,7 +8,6 @@ You should be able to just build and run in XCode.
 
 ## Contributors
 
-[Kevin](http://greyscreen.bandcamp.com)
-Marta
-[Isaac](http://github.com/isaacazuelos)
-
+* Sound by [Kevin](http://greyscreen.bandcamp.com)
+* Art by Marta
+* Code by [Isaac](http://github.com/isaacazuelos)
