@@ -11,6 +11,9 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    static let panUpBoundry: CGFloat = 300.0
+    static let panDownBoundry: CGFloat = 50.0
+    
     let lastTime: TimeInterval = 0.0
     // our world node, which we pan to move the world relative to the camera/scene
     let world = World()
@@ -19,25 +22,20 @@ class GameScene: SKScene {
     
     var keysPressed = Set<Key>()
     
-//    let player = Player(position: CGPoint(x:120, y:120))
-    
-    override func willMove(from view: SKView) {
-        size = CGSize(width: GameConstants.pixelWidth, height: GameConstants.pixelHeight)
-    }
     override func didMove(to view: SKView) {
-        anchorPoint = .zero
-        scaleMode = .fill
+        self.scaleMode = .fill
         self.size = GameConstants.sceneSize
-    
+        self.anchorPoint = .zero
+        
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: GameConstants.gravityStrength)
+        
         self.addChild(world)
         self.addChild(hud)
         
-        world.player = Player(position: CGPoint(x:120, y:120))
-        
-        let mountain = BackgroundSprite(imageNamed: GameConstants.mountainImageName)
-        mountain.name = "mountain"
-        world.addChild(mountain)
+        // Collisions don't really happen in the hud, so we'll make the delegate the world.
+        self.physicsWorld.contactDelegate = world
     }
+    
     override func update(_ currentTime: TimeInterval) {
         let delta = currentTime - lastTime
         world.update(with: delta, and: keysPressed)
@@ -60,7 +58,7 @@ class GameScene: SKScene {
     }
     
     override func mouseDown(with event: NSEvent) {
-        let pos = event.location(in: self)
-        print("click at: \(pos)")
+        let pos = event.location(in: world)
+        world.mouseDown(with: event)
     }
 }

@@ -9,42 +9,30 @@
 import Foundation
 import SpriteKit
 
+extension UInt32 {
+    static let noclip: UInt32 = 0
+    static let player: UInt32 = 1
+    static let obstacle: UInt32 = 2
+}
+
 class Sprite: SKSpriteNode {
     init(imageNamed name: String) {
         let texture = SKTexture(imageNamed: name)
-        texture.filteringMode = .linear
-        
         super.init(texture: texture, color: .black, size: texture.size())
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class BackgroundSprite: Sprite {
+    override init(imageNamed name: String) {
+        super.init(imageNamed: name)
         self.anchorPoint = .zero
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-class Player: Sprite {
-    
-    init(position: CGPoint) {
-        super.init(imageNamed: GameConstants.playerSpriteName)
-        anchorPoint = CGPoint(x:0.5, y:0.5)
-        self.position = position
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func update(with delta: TimeInterval, and keys: Set<Key>) {
-        if keys.contains(Key.up) {
-            self.position.y += 1
-        }
-        if keys.contains(Key.down) {
-            self.position.y -= 1
-        }
-    }
-}
-
-class BackgroundSprite: Sprite {
-    
 }
