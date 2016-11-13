@@ -29,23 +29,23 @@
 		6C0B1B2D1DD7EEDE00AF0869 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */; };
 		6C0B1B2F1DD7F28F00AF0869 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */; };
 		6C0B1B331DD8042300AF0869 /* crystals.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B311DD8042300AF0869 /* crystals.png */; };
-		6C0B1B461DD810BC00AF0869 /* 01. CLOUD1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B361DD810BC00AF0869 /* 01. CLOUD1.WAV */; };
-		6C0B1B471DD810BC00AF0869 /* 02. CLOUD2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B371DD810BC00AF0869 /* 02. CLOUD2.WAV */; };
-		6C0B1B481DD810BC00AF0869 /* 03. CLOUD3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B381DD810BC00AF0869 /* 03. CLOUD3.WAV */; };
-		6C0B1B491DD810BC00AF0869 /* 04. CLOUD4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B391DD810BC00AF0869 /* 04. CLOUD4.WAV */; };
-		6C0B1B4A1DD810BC00AF0869 /* 05. SPACE1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3A1DD810BC00AF0869 /* 05. SPACE1.WAV */; };
-		6C0B1B4B1DD810BC00AF0869 /* 06. SPACE2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3B1DD810BC00AF0869 /* 06. SPACE2.WAV */; };
-		6C0B1B4C1DD810BC00AF0869 /* 07. SPACE3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3C1DD810BC00AF0869 /* 07. SPACE3.WAV */; };
-		6C0B1B4D1DD810BC00AF0869 /* 08. SPACE4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3D1DD810BC00AF0869 /* 08. SPACE4.WAV */; };
-		6C0B1B4E1DD810BC00AF0869 /* 09. MACHINE1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3E1DD810BC00AF0869 /* 09. MACHINE1.WAV */; };
-		6C0B1B4F1DD810BC00AF0869 /* 10. MACHINE2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3F1DD810BC00AF0869 /* 10. MACHINE2.WAV */; };
-		6C0B1B501DD810BC00AF0869 /* 11. MACHINE3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B401DD810BC00AF0869 /* 11. MACHINE3.WAV */; };
-		6C0B1B511DD810BC00AF0869 /* 12. MACHINE4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B411DD810BC00AF0869 /* 12. MACHINE4.WAV */; };
-		6C0B1B521DD810BC00AF0869 /* 13. BEYOND1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B421DD810BC00AF0869 /* 13. BEYOND1.WAV */; };
-		6C0B1B531DD810BC00AF0869 /* 14. BEYOND2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B431DD810BC00AF0869 /* 14. BEYOND2.WAV */; };
-		6C0B1B541DD810BC00AF0869 /* 15. BEYOND3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B441DD810BC00AF0869 /* 15. BEYOND3.WAV */; };
-		6C0B1B551DD810BC00AF0869 /* 16. BEYOND4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B451DD810BC00AF0869 /* 16. BEYOND4.WAV */; };
 		6C0B1B571DD811C500AF0869 /* mountain-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B561DD811C500AF0869 /* mountain-cloud.png */; };
+		6C7C1BFB1DD82A2C00A88985 /* 01. CLOUD1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BEB1DD82A2C00A88985 /* 01. CLOUD1.WAV */; };
+		6C7C1BFC1DD82A2C00A88985 /* 02. CLOUD2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BEC1DD82A2C00A88985 /* 02. CLOUD2.WAV */; };
+		6C7C1BFD1DD82A2C00A88985 /* 03. CLOUD3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BED1DD82A2C00A88985 /* 03. CLOUD3.WAV */; };
+		6C7C1BFE1DD82A2C00A88985 /* 04. CLOUD4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BEE1DD82A2C00A88985 /* 04. CLOUD4.WAV */; };
+		6C7C1BFF1DD82A2C00A88985 /* 05. SPACE1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BEF1DD82A2C00A88985 /* 05. SPACE1.WAV */; };
+		6C7C1C001DD82A2C00A88985 /* 06. SPACE2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF01DD82A2C00A88985 /* 06. SPACE2.WAV */; };
+		6C7C1C011DD82A2C00A88985 /* 07. SPACE3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF11DD82A2C00A88985 /* 07. SPACE3.WAV */; };
+		6C7C1C021DD82A2C00A88985 /* 08. SPACE4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF21DD82A2C00A88985 /* 08. SPACE4.WAV */; };
+		6C7C1C031DD82A2C00A88985 /* 09. MACHINE1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF31DD82A2C00A88985 /* 09. MACHINE1.WAV */; };
+		6C7C1C041DD82A2C00A88985 /* 10. MACHINE2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF41DD82A2C00A88985 /* 10. MACHINE2.WAV */; };
+		6C7C1C051DD82A2C00A88985 /* 11. MACHINE3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF51DD82A2C00A88985 /* 11. MACHINE3.WAV */; };
+		6C7C1C061DD82A2C00A88985 /* 12. MACHINE4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF61DD82A2C00A88985 /* 12. MACHINE4.WAV */; };
+		6C7C1C071DD82A2C00A88985 /* 13. BEYOND1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF71DD82A2C00A88985 /* 13. BEYOND1.WAV */; };
+		6C7C1C081DD82A2C00A88985 /* 14. BEYOND2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF81DD82A2C00A88985 /* 14. BEYOND2.WAV */; };
+		6C7C1C091DD82A2C00A88985 /* 15. BEYOND3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BF91DD82A2C00A88985 /* 15. BEYOND3.WAV */; };
+		6C7C1C0A1DD82A2C00A88985 /* 16. BEYOND4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C1BFA1DD82A2C00A88985 /* 16. BEYOND4.WAV */; };
 		6CA641641DD6719600CAA819 /* mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CA641631DD6719600CAA819 /* mountain.png */; };
 		6CA641661DD676B900CAA819 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CA641651DD676B900CAA819 /* player.png */; };
 		6CA641681DD67B1D00CAA819 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA641671DD67B1D00CAA819 /* World.swift */; };
@@ -83,23 +83,23 @@
 		6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
 		6C0B1B311DD8042300AF0869 /* crystals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crystals.png; path = resources/texture/crystals.png; sourceTree = "<group>"; };
-		6C0B1B361DD810BC00AF0869 /* 01. CLOUD1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "01. CLOUD1.WAV"; sourceTree = "<group>"; };
-		6C0B1B371DD810BC00AF0869 /* 02. CLOUD2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "02. CLOUD2.WAV"; sourceTree = "<group>"; };
-		6C0B1B381DD810BC00AF0869 /* 03. CLOUD3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "03. CLOUD3.WAV"; sourceTree = "<group>"; };
-		6C0B1B391DD810BC00AF0869 /* 04. CLOUD4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "04. CLOUD4.WAV"; sourceTree = "<group>"; };
-		6C0B1B3A1DD810BC00AF0869 /* 05. SPACE1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "05. SPACE1.WAV"; sourceTree = "<group>"; };
-		6C0B1B3B1DD810BC00AF0869 /* 06. SPACE2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "06. SPACE2.WAV"; sourceTree = "<group>"; };
-		6C0B1B3C1DD810BC00AF0869 /* 07. SPACE3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "07. SPACE3.WAV"; sourceTree = "<group>"; };
-		6C0B1B3D1DD810BC00AF0869 /* 08. SPACE4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "08. SPACE4.WAV"; sourceTree = "<group>"; };
-		6C0B1B3E1DD810BC00AF0869 /* 09. MACHINE1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "09. MACHINE1.WAV"; sourceTree = "<group>"; };
-		6C0B1B3F1DD810BC00AF0869 /* 10. MACHINE2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "10. MACHINE2.WAV"; sourceTree = "<group>"; };
-		6C0B1B401DD810BC00AF0869 /* 11. MACHINE3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "11. MACHINE3.WAV"; sourceTree = "<group>"; };
-		6C0B1B411DD810BC00AF0869 /* 12. MACHINE4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "12. MACHINE4.WAV"; sourceTree = "<group>"; };
-		6C0B1B421DD810BC00AF0869 /* 13. BEYOND1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "13. BEYOND1.WAV"; sourceTree = "<group>"; };
-		6C0B1B431DD810BC00AF0869 /* 14. BEYOND2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "14. BEYOND2.WAV"; sourceTree = "<group>"; };
-		6C0B1B441DD810BC00AF0869 /* 15. BEYOND3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "15. BEYOND3.WAV"; sourceTree = "<group>"; };
-		6C0B1B451DD810BC00AF0869 /* 16. BEYOND4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "16. BEYOND4.WAV"; sourceTree = "<group>"; };
 		6C0B1B561DD811C500AF0869 /* mountain-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mountain-cloud.png"; path = "resources/texture/mountain-cloud.png"; sourceTree = "<group>"; };
+		6C7C1BEB1DD82A2C00A88985 /* 01. CLOUD1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "01. CLOUD1.WAV"; sourceTree = "<group>"; };
+		6C7C1BEC1DD82A2C00A88985 /* 02. CLOUD2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "02. CLOUD2.WAV"; sourceTree = "<group>"; };
+		6C7C1BED1DD82A2C00A88985 /* 03. CLOUD3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "03. CLOUD3.WAV"; sourceTree = "<group>"; };
+		6C7C1BEE1DD82A2C00A88985 /* 04. CLOUD4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "04. CLOUD4.WAV"; sourceTree = "<group>"; };
+		6C7C1BEF1DD82A2C00A88985 /* 05. SPACE1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "05. SPACE1.WAV"; sourceTree = "<group>"; };
+		6C7C1BF01DD82A2C00A88985 /* 06. SPACE2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "06. SPACE2.WAV"; sourceTree = "<group>"; };
+		6C7C1BF11DD82A2C00A88985 /* 07. SPACE3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "07. SPACE3.WAV"; sourceTree = "<group>"; };
+		6C7C1BF21DD82A2C00A88985 /* 08. SPACE4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "08. SPACE4.WAV"; sourceTree = "<group>"; };
+		6C7C1BF31DD82A2C00A88985 /* 09. MACHINE1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "09. MACHINE1.WAV"; sourceTree = "<group>"; };
+		6C7C1BF41DD82A2C00A88985 /* 10. MACHINE2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "10. MACHINE2.WAV"; sourceTree = "<group>"; };
+		6C7C1BF51DD82A2C00A88985 /* 11. MACHINE3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "11. MACHINE3.WAV"; sourceTree = "<group>"; };
+		6C7C1BF61DD82A2C00A88985 /* 12. MACHINE4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "12. MACHINE4.WAV"; sourceTree = "<group>"; };
+		6C7C1BF71DD82A2C00A88985 /* 13. BEYOND1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "13. BEYOND1.WAV"; sourceTree = "<group>"; };
+		6C7C1BF81DD82A2C00A88985 /* 14. BEYOND2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "14. BEYOND2.WAV"; sourceTree = "<group>"; };
+		6C7C1BF91DD82A2C00A88985 /* 15. BEYOND3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "15. BEYOND3.WAV"; sourceTree = "<group>"; };
+		6C7C1BFA1DD82A2C00A88985 /* 16. BEYOND4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "16. BEYOND4.WAV"; sourceTree = "<group>"; };
 		6CA641631DD6719600CAA819 /* mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain.png; path = resources/texture/mountain.png; sourceTree = "<group>"; };
 		6CA641651DD676B900CAA819 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = resources/texture/player.png; sourceTree = "<group>"; };
 		6CA641671DD67B1D00CAA819 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
@@ -149,22 +149,22 @@
 		6C0B1B101DD7CCF800AF0869 /* effects */ = {
 			isa = PBXGroup;
 			children = (
-				6C0B1B361DD810BC00AF0869 /* 01. CLOUD1.WAV */,
-				6C0B1B371DD810BC00AF0869 /* 02. CLOUD2.WAV */,
-				6C0B1B381DD810BC00AF0869 /* 03. CLOUD3.WAV */,
-				6C0B1B391DD810BC00AF0869 /* 04. CLOUD4.WAV */,
-				6C0B1B3A1DD810BC00AF0869 /* 05. SPACE1.WAV */,
-				6C0B1B3B1DD810BC00AF0869 /* 06. SPACE2.WAV */,
-				6C0B1B3C1DD810BC00AF0869 /* 07. SPACE3.WAV */,
-				6C0B1B3D1DD810BC00AF0869 /* 08. SPACE4.WAV */,
-				6C0B1B3E1DD810BC00AF0869 /* 09. MACHINE1.WAV */,
-				6C0B1B3F1DD810BC00AF0869 /* 10. MACHINE2.WAV */,
-				6C0B1B401DD810BC00AF0869 /* 11. MACHINE3.WAV */,
-				6C0B1B411DD810BC00AF0869 /* 12. MACHINE4.WAV */,
-				6C0B1B421DD810BC00AF0869 /* 13. BEYOND1.WAV */,
-				6C0B1B431DD810BC00AF0869 /* 14. BEYOND2.WAV */,
-				6C0B1B441DD810BC00AF0869 /* 15. BEYOND3.WAV */,
-				6C0B1B451DD810BC00AF0869 /* 16. BEYOND4.WAV */,
+				6C7C1BEB1DD82A2C00A88985 /* 01. CLOUD1.WAV */,
+				6C7C1BEC1DD82A2C00A88985 /* 02. CLOUD2.WAV */,
+				6C7C1BED1DD82A2C00A88985 /* 03. CLOUD3.WAV */,
+				6C7C1BEE1DD82A2C00A88985 /* 04. CLOUD4.WAV */,
+				6C7C1BEF1DD82A2C00A88985 /* 05. SPACE1.WAV */,
+				6C7C1BF01DD82A2C00A88985 /* 06. SPACE2.WAV */,
+				6C7C1BF11DD82A2C00A88985 /* 07. SPACE3.WAV */,
+				6C7C1BF21DD82A2C00A88985 /* 08. SPACE4.WAV */,
+				6C7C1BF31DD82A2C00A88985 /* 09. MACHINE1.WAV */,
+				6C7C1BF41DD82A2C00A88985 /* 10. MACHINE2.WAV */,
+				6C7C1BF51DD82A2C00A88985 /* 11. MACHINE3.WAV */,
+				6C7C1BF61DD82A2C00A88985 /* 12. MACHINE4.WAV */,
+				6C7C1BF71DD82A2C00A88985 /* 13. BEYOND1.WAV */,
+				6C7C1BF81DD82A2C00A88985 /* 14. BEYOND2.WAV */,
+				6C7C1BF91DD82A2C00A88985 /* 15. BEYOND3.WAV */,
+				6C7C1BFA1DD82A2C00A88985 /* 16. BEYOND4.WAV */,
 			);
 			name = effects;
 			path = resources/sound/music;
@@ -345,42 +345,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C0B1B4D1DD810BC00AF0869 /* 08. SPACE4.WAV in Resources */,
 				6C0B1AEB1DD7C6A200AF0869 /* 11.WAV in Resources */,
 				6C0B1AE41DD7C6A200AF0869 /* 04.WAV in Resources */,
-				6C0B1B531DD810BC00AF0869 /* 14. BEYOND2.WAV in Resources */,
 				6CB1325E1DD662E0000CF128 /* GameScene.sks in Resources */,
-				6C0B1B471DD810BC00AF0869 /* 02. CLOUD2.WAV in Resources */,
+				6C7C1C091DD82A2C00A88985 /* 15. BEYOND3.WAV in Resources */,
+				6C7C1BFB1DD82A2C00A88985 /* 01. CLOUD1.WAV in Resources */,
+				6C7C1C081DD82A2C00A88985 /* 14. BEYOND2.WAV in Resources */,
+				6C7C1C061DD82A2C00A88985 /* 12. MACHINE4.WAV in Resources */,
+				6C7C1C071DD82A2C00A88985 /* 13. BEYOND1.WAV in Resources */,
+				6C7C1C051DD82A2C00A88985 /* 11. MACHINE3.WAV in Resources */,
 				6C0B1AE31DD7C6A200AF0869 /* 03.WAV in Resources */,
-				6C0B1B511DD810BC00AF0869 /* 12. MACHINE4.WAV in Resources */,
-				6C0B1B501DD810BC00AF0869 /* 11. MACHINE3.WAV in Resources */,
-				6C0B1B551DD810BC00AF0869 /* 16. BEYOND4.WAV in Resources */,
-				6C0B1B4F1DD810BC00AF0869 /* 10. MACHINE2.WAV in Resources */,
-				6C0B1B4A1DD810BC00AF0869 /* 05. SPACE1.WAV in Resources */,
 				6C0B1B331DD8042300AF0869 /* crystals.png in Resources */,
-				6C0B1B541DD810BC00AF0869 /* 15. BEYOND3.WAV in Resources */,
 				6C0B1AE51DD7C6A200AF0869 /* 05.WAV in Resources */,
 				6C0B1AE21DD7C6A200AF0869 /* 02.WAV in Resources */,
 				6C0B1AB71DD7055900AF0869 /* ball.png in Resources */,
-				6C0B1B4C1DD810BC00AF0869 /* 07. SPACE3.WAV in Resources */,
-				6C0B1B4E1DD810BC00AF0869 /* 09. MACHINE1.WAV in Resources */,
 				6CA641661DD676B900CAA819 /* player.png in Resources */,
+				6C7C1C041DD82A2C00A88985 /* 10. MACHINE2.WAV in Resources */,
 				6CA641641DD6719600CAA819 /* mountain.png in Resources */,
 				6C0B1AE71DD7C6A200AF0869 /* 07.WAV in Resources */,
 				6C0B1AE61DD7C6A200AF0869 /* 06.WAV in Resources */,
+				6C7C1BFD1DD82A2C00A88985 /* 03. CLOUD3.WAV in Resources */,
+				6C7C1BFC1DD82A2C00A88985 /* 02. CLOUD2.WAV in Resources */,
+				6C7C1BFE1DD82A2C00A88985 /* 04. CLOUD4.WAV in Resources */,
 				6C0B1B571DD811C500AF0869 /* mountain-cloud.png in Resources */,
-				6C0B1B4B1DD810BC00AF0869 /* 06. SPACE2.WAV in Resources */,
 				6C0B1B251DD7D9E000AF0869 /* background.png in Resources */,
-				6C0B1B481DD810BC00AF0869 /* 03. CLOUD3.WAV in Resources */,
-				6C0B1B521DD810BC00AF0869 /* 13. BEYOND1.WAV in Resources */,
-				6C0B1B491DD810BC00AF0869 /* 04. CLOUD4.WAV in Resources */,
+				6C7C1C011DD82A2C00A88985 /* 07. SPACE3.WAV in Resources */,
 				6C0B1AEA1DD7C6A200AF0869 /* 10.WAV in Resources */,
+				6C7C1C001DD82A2C00A88985 /* 06. SPACE2.WAV in Resources */,
 				6CD391251DD6586000A70400 /* Assets.xcassets in Resources */,
 				6C0B1AE91DD7C6A200AF0869 /* 09.WAV in Resources */,
 				6C0B1B291DD7DFA700AF0869 /* cloud.png in Resources */,
-				6C0B1B461DD810BC00AF0869 /* 01. CLOUD1.WAV in Resources */,
+				6C7C1BFF1DD82A2C00A88985 /* 05. SPACE1.WAV in Resources */,
+				6C7C1C021DD82A2C00A88985 /* 08. SPACE4.WAV in Resources */,
 				6C0B1AED1DD7C74000AF0869 /* 01.WAV in Resources */,
+				6C7C1C031DD82A2C00A88985 /* 09. MACHINE1.WAV in Resources */,
 				6C0B1AE81DD7C6A200AF0869 /* 08.WAV in Resources */,
+				6C7C1C0A1DD82A2C00A88985 /* 16. BEYOND4.WAV in Resources */,
 				6CD391281DD6586000A70400 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
