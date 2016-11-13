@@ -10,16 +10,19 @@ import Foundation
 
 struct GameConstants {
     // MARK: - Sizes
-    static let ratio: CGFloat = 2
+    static let ratio: CGFloat = 1.5
     static let pixelWidth: CGFloat = 256
-    static var pixelHeight: CGFloat = 455
+    static let pixelHeight: CGFloat = 455
+    
+    static let zoomLevel: CGFloat = 2
     static let windowContentSize = NSSize(width: pixelWidth * ratio, height: pixelHeight * ratio)
     static let sceneSize = CGSize(width: pixelWidth, height: pixelHeight)
     // MARK: - Camera
+    static let panHorizonalMargin: CGFloat = pixelWidth * 0.2
     static let panUpBoundry: CGFloat = pixelHeight * 0.8
     static let panDownBoundry: CGFloat = pixelHeight * 0.2
-    
-    static let playerSize = CGSize(width: 32, height: 32)
+    // MARK: - Player Details
+    static let playerSize = CGSize(width: 16, height: 16)
     // MARK: - Textures
     static let mountainImageName = "mountain.png"
     static let playerSpriteName = "player.png"
@@ -30,20 +33,21 @@ struct GameConstants {
     static let musicPlaybackMultiplier: Float = 1.0
     static let testSoundEffectFileName = "01. CLOUD1.WAV"
     // MARK: - Physics
-    static let gravityStrength:          CGFloat = -3
-    static let playerImpulseVertical:    CGFloat = 30
-    static let playerImpulseHorizontal:  CGFloat = 30
-    static let playerMaxHorizontalSpeed: CGFloat = 200
-    static let playerMaxSpeedUp:         CGFloat = 300
-    static let playerMaxSpeedDown:       CGFloat = 200
-    static let playerFiction:            CGFloat = 7.5
+    static let gravityStrength:          CGFloat = -4
+    static let playerImpulseVertical:    CGFloat = 0.08
+    static let playerImpulseHorizontal:  CGFloat = 0.05
+    static let playerMaxHorizontalSpeed: CGFloat = 150
+    static let playerMaxSpeedUp:         CGFloat = 150
+    static let playerMaxSpeedDown:       CGFloat = 350
+    static let playerFiction:            CGFloat = 3
     // MARK: - Coins
     static let coinBoost: CGFloat = 100
     static let coins = [
         // Cloud
-        Coin(imageNamed: "ball.png", position: CGPoint(x:30,  y:338), with: SoundEffect(fileName: "01. CLOUD1.WAV")),
-        Coin(imageNamed: "ball.png", position: CGPoint(x:209, y:350), with: SoundEffect(fileName: "02. CLOUD2.WAV")),
-        Coin(imageNamed: "ball.png", position: CGPoint(x:120, y:540), with: SoundEffect(fileName: "03. CLOUD3.WAV")),
-        Coin(imageNamed: "ball.png", position: CGPoint(x:250, y:440), with: SoundEffect(fileName: "04. CLOUD4.WAV")),
+        Coin(imageNamed: "ball.png", position: CGPoint(x:128,  y:190), with: SoundEffect(fileName: "01. CLOUD1.WAV")),
+        Coin(imageNamed: "ball.png", position: CGPoint(x:100, y:270), with: SoundEffect(fileName: "02. CLOUD2.WAV")),
+        Coin(imageNamed: "ball.png", position: CGPoint(x:20, y:80), with: SoundEffect(fileName: "03. CLOUD3.WAV")),
+        Coin(imageNamed: "ball.png", position: CGPoint(x:233, y:190), with: SoundEffect(fileName: "04. CLOUD4.WAV")),
+        
     ]
 }

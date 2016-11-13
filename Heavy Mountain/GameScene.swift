@@ -15,7 +15,7 @@ class GameScene: SKScene {
     let lastTime: TimeInterval = 0.0
     let music = MusicPlayer()
     // our world node, which we pan to move the world relative to the camera/scene
-    let world = World()
+    var world = World()
     // our hud node, which is fixed relative to the scene
     let hud = Hud()
     
@@ -24,11 +24,14 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         self.scaleMode = .fill
         self.size = GameConstants.sceneSize
-        self.anchorPoint = .zero
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: GameConstants.gravityStrength)
         
+        self.world.setScale(GameConstants.zoomLevel)
+        
         self.addChild(world)
+        self.world.position.x = -128
+        
         self.addChild(hud)
         hud.zPosition = 100000
         

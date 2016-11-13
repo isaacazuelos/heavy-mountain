@@ -10,9 +10,7 @@ import Foundation
 import SpriteKit
 
 class Player: Sprite {
-    
     static let verticalImpulse: CGFloat = 1.0
-    
     static let textureNames = [
         "player-frame-1.png",
         "player-frame-2.png",
@@ -22,9 +20,9 @@ class Player: Sprite {
         "player-frame-4.png",
         "player-frame-3.png",
         "player-frame-2.png",
-        ]
+    ]
+    var hasGoneUp = false
     let textures = Player.textureNames.map({ SKTexture(imageNamed: $0) })
-    
     init(position: CGPoint) {
         
         let firstTexture = textures.first!
@@ -39,7 +37,7 @@ class Player: Sprite {
         self.physicsBody = SKPhysicsBody(texture: firstTexture, size: self.size)
         self.physicsBody?.allowsRotation = false
         self.physicsBody?.usesPreciseCollisionDetection = true
-        self.physicsBody?.affectedByGravity = true
+        self.physicsBody?.affectedByGravity = false // set to true when they try to lift off.
         self.physicsBody?.categoryBitMask = .player
         self.physicsBody?.collisionBitMask = .player
         self.physicsBody?.contactTestBitMask = .player | .obstacle
@@ -53,7 +51,6 @@ class Player: Sprite {
     func setupAnimation() {
         run(SKAction.repeatForever(SKAction.animate(with: textures, timePerFrame: 0.3)))
     }
-    
     func clampPosition() {
         if let body = self.physicsBody {
             if self.position.x <= 0 {
@@ -70,7 +67,6 @@ class Player: Sprite {
             }
         }
     }
-    
     func clampVerticalVelocity() {
         if let dy = self.physicsBody?.velocity.dy {
             self.physicsBody?.velocity.dy = dy >= 0
@@ -78,7 +74,6 @@ class Player: Sprite {
                 : max(-GameConstants.playerMaxSpeedDown, dy)
         }
     }
-    
     func clampHorizontalVelocity() {
         if let dx = self.physicsBody?.velocity.dx {
             self.physicsBody?.velocity.dx = dx >= 0
@@ -87,8 +82,30 @@ class Player: Sprite {
         }
 
     }
+    func setRotation() {
+        
+        if self.physicsBody?.velocity == .zero {
+            self.zRotation = CGFloat.pi / 2
+        }
+        
+//        let h = GameConstants.playerMaxHorizontalSpeed
+        guard let x = self.physicsBody?.velocity.dx else { return }
+        guard let y = self.physicsBody?.velocity.dy else { return }
+////        let π = CGFloat.pi
+//                        // [-h  .. h]
+//        v = v + h       // [0   .. 2h]
+//        v = v / (2 * h) // [0   .. 1]
+//        v = v * (π / 2) // [0   .. π/2]
+//        v = (π / 4) - v // [π/4 .. 3π/4]
+        self.zRotation = atan2(y, x) - (CGFloat.pi / 2)
+    }
+    
     func update(with delta: TimeInterval, and keys: Set<Key>) {
 
+        if !hasGoneUp && keys.contains(Key.up) {
+            self.physicsBody?.affectedByGravity = true
+        }
+        
         var impulse = GameConstants.playerImpulseVertical
         if keys.contains(Key.b) {
             impulse *= 2
@@ -115,7 +132,7 @@ class Player: Sprite {
         }
         clampHorizontalVelocity()
         clampPosition()
-        
+        setRotation()
     }
     func collected(coin: Coin) {
         print("coin collected")

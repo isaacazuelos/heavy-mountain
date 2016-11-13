@@ -51,7 +51,7 @@ class World: SKNode {
         self.addChild(boundries)
         
         // player
-        player = Player(position: CGPoint(x:GameConstants.pixelWidth / 2, y:GameConstants.pixelHeight / 2))
+        player = Player(position: CGPoint(x: GameConstants.pixelWidth / 2, y: GameConstants.pixelHeight / 4))
         
         for coin in GameConstants.coins {
             coin.zPosition = .playerPlane
@@ -80,9 +80,9 @@ class World: SKNode {
         self.positionCamera()
     }
     func positionCamera() {
-        guard let player = player else { return }
+        guard let player = player, let parent = self.parent else { return }
         
-        let playerPositionInFrame = self.convert(player.position, to: parent!)
+        let playerPositionInFrame = self.convert(player.position, to: parent)
 
         if playerPositionInFrame.y > GameConstants.panUpBoundry {
             self.position.y -= playerPositionInFrame.y - GameConstants.panUpBoundry
@@ -95,6 +95,18 @@ class World: SKNode {
         // right now, when moving down, there's an issue if the player just get's slammed down into the bottom, where it doesn't pan the world down all the way. This is just a cheap, but chop-inducing fix.
         if player.position.y == 0 {
             self.position.y = 0
+        }
+        
+        // Horizontal Panning
+        // left
+        if playerPositionInFrame.x <= GameConstants.panHorizonalMargin {
+            self.position.x = min(0, self.position.x - (playerPositionInFrame.x - GameConstants.panHorizonalMargin))
+        }
+        
+        // right
+        let rightMargin = GameConstants.pixelWidth - GameConstants.panHorizonalMargin
+        if playerPositionInFrame.x >= rightMargin {
+            self.position.x = max(-GameConstants.pixelWidth, self.position.x - (playerPositionInFrame.x - rightMargin))
         }
     }
 }

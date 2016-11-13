@@ -19,6 +19,7 @@ class Sprite: SKSpriteNode {
     init() {
         super.init(texture: nil, color: .black, size: .zero)
     }
+    
     init(imageNamed name: String) {
         let texture = SKTexture(imageNamed: name)
         super.init(texture: texture, color: .black, size: texture.size())
