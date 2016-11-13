@@ -13,14 +13,30 @@ class Player: Sprite {
     
     static let verticalImpulse: CGFloat = 1.0
     
+    static let textureNames = [
+        "player-frame-1.png",
+        "player-frame-2.png",
+        "player-frame-3.png",
+        "player-frame-4.png",
+        "player-frame-5.png",
+        "player-frame-4.png",
+        "player-frame-3.png",
+        "player-frame-2.png",
+        ]
+    let textures = Player.textureNames.map({ SKTexture(imageNamed: $0) })
+    
     init(position: CGPoint) {
-        super.init(imageNamed: GameConstants.playerSpriteName)
+        
+        let firstTexture = textures.first!
+        
+        super.init(imageNamed: Player.textureNames.first!)
+        
+        self.scale(to: GameConstants.playerSize)
+        
         anchorPoint = CGPoint(x:0.5, y:0.5)
         self.position = position
         
-        let texture = self.texture!
-        
-        self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
+        self.physicsBody = SKPhysicsBody(texture: firstTexture, size: self.size)
         self.physicsBody?.allowsRotation = false
         self.physicsBody?.usesPreciseCollisionDetection = true
         self.physicsBody?.affectedByGravity = true
@@ -28,10 +44,16 @@ class Player: Sprite {
         self.physicsBody?.collisionBitMask = .player
         self.physicsBody?.contactTestBitMask = .player | .obstacle
         self.physicsBody?.linearDamping = GameConstants.playerFiction
+        
+        setupAnimation()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    func setupAnimation() {
+        run(SKAction.repeatForever(SKAction.animate(with: textures, timePerFrame: 0.3)))
+    }
+    
     func clampPosition() {
         if let body = self.physicsBody {
             if self.position.x <= 0 {
@@ -49,24 +71,27 @@ class Player: Sprite {
         }
     }
     
-    func clampVelocity() {
-        if let velocity = self.physicsBody?.velocity {
-            let dx = velocity.dx >= 0
-                        ? min(GameConstants.playerMaxHorizontalSpeed,  velocity.dx)
-                        : max(-GameConstants.playerMaxHorizontalSpeed, velocity.dx)
-            
-            let dy = velocity.dy >= 0
-                        ? min(GameConstants.playerMaxSpeedUp, velocity.dy)
-                        : max(-GameConstants.playerMaxSpeedDown, velocity.dy)
-            
-            self.physicsBody?.velocity = CGVector(dx: dx, dy: dy)
+    func clampVerticalVelocity() {
+        if let dy = self.physicsBody?.velocity.dy {
+            self.physicsBody?.velocity.dy = dy >= 0
+                ? min(GameConstants.playerMaxSpeedUp, dy)
+                : max(-GameConstants.playerMaxSpeedDown, dy)
         }
+    }
+    
+    func clampHorizontalVelocity() {
+        if let dx = self.physicsBody?.velocity.dx {
+            self.physicsBody?.velocity.dx = dx >= 0
+                ? min(GameConstants.playerMaxHorizontalSpeed,  dx)
+                : max(-GameConstants.playerMaxHorizontalSpeed, dx)
+        }
+
     }
     func update(with delta: TimeInterval, and keys: Set<Key>) {
 
         var impulse = GameConstants.playerImpulseVertical
         if keys.contains(Key.b) {
-            impulse = 1.0
+            impulse *= 2
         }
         
         if keys.contains(Key.up) && !keys.contains(Key.down){
@@ -77,6 +102,7 @@ class Player: Sprite {
         }
         
         impulse = GameConstants.playerImpulseHorizontal
+        
         if keys.contains(Key.right) && !keys.contains(Key.left) {
             self.physicsBody?.applyImpulse(CGVector(dx:impulse, dy:0.0))
         }
@@ -85,8 +111,9 @@ class Player: Sprite {
 
         }
         if !keys.contains(Key.b) {
-            clampVelocity()
+            clampVerticalVelocity()
         }
+        clampHorizontalVelocity()
         clampPosition()
         
     }

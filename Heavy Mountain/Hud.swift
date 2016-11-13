@@ -17,7 +17,7 @@ class Hud: SKNode {
     override init() {
         highestPointLabel = SKLabelNode(fontNamed: "Futura")
         
-        highestPointLabel.fontSize = 8
+        highestPointLabel.fontSize = 10
         highestPointLabel.verticalAlignmentMode = .top
         highestPointLabel.horizontalAlignmentMode = .left
         

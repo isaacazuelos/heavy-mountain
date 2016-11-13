@@ -11,9 +11,6 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    static let panUpBoundry: CGFloat = 300.0
-    static let panDownBoundry: CGFloat = 50.0
-    
     // the time of the last frame, used to compute the deltas
     let lastTime: TimeInterval = 0.0
     let music = MusicPlayer()

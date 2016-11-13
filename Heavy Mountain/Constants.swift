@@ -12,9 +12,14 @@ struct GameConstants {
     // MARK: - Sizes
     static let ratio: CGFloat = 2
     static let pixelWidth: CGFloat = 256
-    static var pixelHeight: CGFloat = 384 // about 9:16
+    static var pixelHeight: CGFloat = 455
     static let windowContentSize = NSSize(width: pixelWidth * ratio, height: pixelHeight * ratio)
     static let sceneSize = CGSize(width: pixelWidth, height: pixelHeight)
+    // MARK: - Camera
+    static let panUpBoundry: CGFloat = pixelHeight * 0.8
+    static let panDownBoundry: CGFloat = pixelHeight * 0.2
+    
+    static let playerSize = CGSize(width: 32, height: 32)
     // MARK: - Textures
     static let mountainImageName = "mountain.png"
     static let playerSpriteName = "player.png"
@@ -26,10 +31,10 @@ struct GameConstants {
     static let testSoundEffectFileName = "01. CLOUD1.WAV"
     // MARK: - Physics
     static let gravityStrength:          CGFloat = -3
-    static let playerImpulseVertical:    CGFloat = 0.2
-    static let playerImpulseHorizontal:  CGFloat = 0.2
-    static let playerMaxHorizontalSpeed: CGFloat = 120
-    static let playerMaxSpeedUp:         CGFloat = 100
+    static let playerImpulseVertical:    CGFloat = 30
+    static let playerImpulseHorizontal:  CGFloat = 30
+    static let playerMaxHorizontalSpeed: CGFloat = 200
+    static let playerMaxSpeedUp:         CGFloat = 300
     static let playerMaxSpeedDown:       CGFloat = 200
     static let playerFiction:            CGFloat = 7.5
     // MARK: - Coins

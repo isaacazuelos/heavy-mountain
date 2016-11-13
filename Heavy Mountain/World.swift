@@ -11,6 +11,7 @@ import SpriteKit
 
 extension CGFloat {
     static let playerPlane: CGFloat = 0
+    static let behindPlayer: CGFloat = -1
     static let background: CGFloat = -10
     static let foreground: CGFloat = 10
 }
@@ -35,36 +36,22 @@ class World: SKNode {
         
         // background
         let bg1 = BackgroundSprite(imageNamed: "background.png")
-        bg1.scale(to: CGSize(width:256, height:1740))
         bg1.zPosition = .background
         self.addChild(bg1)
         
         // mountain
         let mountain = BackgroundSprite(imageNamed: GameConstants.mountainImageName)
-        mountain.zPosition = .background
+        mountain.zPosition = .behindPlayer
         mountain.name = "mountain"
         self.addChild(mountain)
 
-        // clouds
-        let cloud = BackgroundSprite(imageNamed: "cloud.png")
-        cloud.zPosition = .foreground
-        cloud.scale(to: CGSize(width: 256, height: 915))
-        self.addChild(cloud)
-        
-        let mountainCloud = BackgroundSprite(imageNamed: "mountain-cloud.png")
-        mountainCloud.zPosition = .foreground
-        mountainCloud.scale(to: CGSize(width: 256, height: 915))
-        self.addChild(mountainCloud)
-        
-        // crystals
-        let crystals = BackgroundSprite(imageNamed: "crystals.png")
-        crystals.zPosition = .foreground
-        crystals.scale(to: CGSize(width: 256, height: 915))
-        crystals.position = CGPoint(x:0, y:915 - 85)
-        self.addChild(crystals)
+        // boundries
+        let boundries = BackgroundSprite(imageNamed: "boundries")
+        boundries.zPosition = .foreground
+        self.addChild(boundries)
         
         // player
-        player = Player(position: CGPoint(x:120, y:160))
+        player = Player(position: CGPoint(x:GameConstants.pixelWidth / 2, y:GameConstants.pixelHeight / 2))
         
         for coin in GameConstants.coins {
             coin.zPosition = .playerPlane
@@ -97,12 +84,12 @@ class World: SKNode {
         
         let playerPositionInFrame = self.convert(player.position, to: parent!)
 
-        if playerPositionInFrame.y > GameScene.panUpBoundry {
-            self.position.y -= playerPositionInFrame.y - GameScene.panUpBoundry
+        if playerPositionInFrame.y > GameConstants.panUpBoundry {
+            self.position.y -= playerPositionInFrame.y - GameConstants.panUpBoundry
         }
-        if (playerPositionInFrame.y < GameScene.panDownBoundry)
-                && (player.position.y > GameScene.panDownBoundry) {
-            self.position.y += GameScene.panDownBoundry - playerPositionInFrame.y
+        if (playerPositionInFrame.y < GameConstants.panDownBoundry)
+                && (player.position.y > GameConstants.panDownBoundry) {
+            self.position.y += GameConstants.panDownBoundry - playerPositionInFrame.y
         }
         // TODO: Fix properly
         // right now, when moving down, there's an issue if the player just get's slammed down into the bottom, where it doesn't pan the world down all the way. This is just a cheap, but chop-inducing fix.
