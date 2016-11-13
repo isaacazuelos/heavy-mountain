@@ -27,13 +27,11 @@ class Player: Sprite {
         self.physicsBody?.categoryBitMask = .player
         self.physicsBody?.collisionBitMask = .player
         self.physicsBody?.contactTestBitMask = .player | .obstacle
-        self.physicsBody?.friction = GameConstants.playerFiction
+        self.physicsBody?.linearDamping = GameConstants.playerFiction
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     func clampPosition() {
         if let body = self.physicsBody {
             if self.position.x <= 0 {
@@ -51,22 +49,49 @@ class Player: Sprite {
         }
     }
     
+    func clampVelocity() {
+        if let velocity = self.physicsBody?.velocity {
+            let dx = velocity.dx >= 0
+                        ? min(GameConstants.playerMaxHorizontalSpeed,  velocity.dx)
+                        : max(-GameConstants.playerMaxHorizontalSpeed, velocity.dx)
+            
+            let dy = velocity.dy >= 0
+                        ? min(GameConstants.playerMaxSpeedUp, velocity.dy)
+                        : max(-GameConstants.playerMaxSpeedDown, velocity.dy)
+            
+            self.physicsBody?.velocity = CGVector(dx: dx, dy: dy)
+        }
+    }
     func update(with delta: TimeInterval, and keys: Set<Key>) {
 
         var impulse = GameConstants.playerImpulseVertical
+        if keys.contains(Key.b) {
+            impulse = 1.0
+        }
+        
         if keys.contains(Key.up) && !keys.contains(Key.down){
             self.physicsBody?.applyImpulse(CGVector(dx:0.0, dy:impulse))
         }
         if keys.contains(Key.down) && !keys.contains(Key.up) {
             self.physicsBody?.applyImpulse(CGVector(dx:0.0, dy:-impulse))
         }
+        
         impulse = GameConstants.playerImpulseHorizontal
         if keys.contains(Key.right) && !keys.contains(Key.left) {
-            self.physicsBody?.applyImpulse(CGVector(dx:impulse, dy:0))
+            self.physicsBody?.applyImpulse(CGVector(dx:impulse, dy:0.0))
         }
         if keys.contains(Key.left) && !keys.contains(Key.right) {
-            self.physicsBody?.applyImpulse(CGVector(dx:-impulse, dy:0))
+            self.physicsBody?.applyImpulse(CGVector(dx:-impulse, dy:0.0))
+
+        }
+        if !keys.contains(Key.b) {
+            clampVelocity()
         }
         clampPosition()
+        
+    }
+    func collected(coin: Coin) {
+        print("coin collected")
+        self.physicsBody?.applyForce(CGVector(dx: 0.0, dy: GameConstants.coinBoost))
     }
 }

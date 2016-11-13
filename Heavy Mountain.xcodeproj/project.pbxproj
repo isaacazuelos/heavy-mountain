@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C0B1AAB1DD68E6C00AF0869 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AAA1DD68E6C00AF0869 /* Key.swift */; };
-		6C0B1AAD1DD69B9000AF0869 /* test-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1AAC1DD69B9000AF0869 /* test-bg.png */; };
-		6C0B1AB01DD6C4D500AF0869 /* world-1-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1AAE1DD6C4D500AF0869 /* world-1-bg.png */; };
-		6C0B1AB11DD6C4D500AF0869 /* world-2-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1AAF1DD6C4D500AF0869 /* world-2-bg.png */; };
 		6C0B1AB31DD6D23B00AF0869 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AB21DD6D23B00AF0869 /* Player.swift */; };
-		6C0B1AB51DD703CB00AF0869 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AB41DD703CB00AF0869 /* Obstacle.swift */; };
+		6C0B1AB51DD703CB00AF0869 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AB41DD703CB00AF0869 /* Coin.swift */; };
 		6C0B1AB71DD7055900AF0869 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1AB61DD7055900AF0869 /* ball.png */; };
 		6C0B1ABB1DD7A20200AF0869 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1ABA1DD7A20200AF0869 /* MusicPlayer.swift */; };
 		6C0B1AD41DD7B5E600AF0869 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AD31DD7B5E600AF0869 /* Track.swift */; };
@@ -27,6 +23,29 @@
 		6C0B1AEA1DD7C6A200AF0869 /* 10.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1ADF1DD7C6A200AF0869 /* 10.WAV */; };
 		6C0B1AEB1DD7C6A200AF0869 /* 11.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1AE01DD7C6A200AF0869 /* 11.WAV */; };
 		6C0B1AED1DD7C74000AF0869 /* 01.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1AEC1DD7C74000AF0869 /* 01.WAV */; };
+		6C0B1B251DD7D9E000AF0869 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B241DD7D9E000AF0869 /* background.png */; };
+		6C0B1B291DD7DFA700AF0869 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B281DD7DFA700AF0869 /* cloud.png */; };
+		6C0B1B2C1DD7EEDE00AF0869 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2A1DD7EEDE00AF0869 /* Key.swift */; };
+		6C0B1B2D1DD7EEDE00AF0869 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */; };
+		6C0B1B2F1DD7F28F00AF0869 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */; };
+		6C0B1B331DD8042300AF0869 /* crystals.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B311DD8042300AF0869 /* crystals.png */; };
+		6C0B1B461DD810BC00AF0869 /* 01. CLOUD1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B361DD810BC00AF0869 /* 01. CLOUD1.WAV */; };
+		6C0B1B471DD810BC00AF0869 /* 02. CLOUD2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B371DD810BC00AF0869 /* 02. CLOUD2.WAV */; };
+		6C0B1B481DD810BC00AF0869 /* 03. CLOUD3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B381DD810BC00AF0869 /* 03. CLOUD3.WAV */; };
+		6C0B1B491DD810BC00AF0869 /* 04. CLOUD4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B391DD810BC00AF0869 /* 04. CLOUD4.WAV */; };
+		6C0B1B4A1DD810BC00AF0869 /* 05. SPACE1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3A1DD810BC00AF0869 /* 05. SPACE1.WAV */; };
+		6C0B1B4B1DD810BC00AF0869 /* 06. SPACE2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3B1DD810BC00AF0869 /* 06. SPACE2.WAV */; };
+		6C0B1B4C1DD810BC00AF0869 /* 07. SPACE3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3C1DD810BC00AF0869 /* 07. SPACE3.WAV */; };
+		6C0B1B4D1DD810BC00AF0869 /* 08. SPACE4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3D1DD810BC00AF0869 /* 08. SPACE4.WAV */; };
+		6C0B1B4E1DD810BC00AF0869 /* 09. MACHINE1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3E1DD810BC00AF0869 /* 09. MACHINE1.WAV */; };
+		6C0B1B4F1DD810BC00AF0869 /* 10. MACHINE2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B3F1DD810BC00AF0869 /* 10. MACHINE2.WAV */; };
+		6C0B1B501DD810BC00AF0869 /* 11. MACHINE3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B401DD810BC00AF0869 /* 11. MACHINE3.WAV */; };
+		6C0B1B511DD810BC00AF0869 /* 12. MACHINE4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B411DD810BC00AF0869 /* 12. MACHINE4.WAV */; };
+		6C0B1B521DD810BC00AF0869 /* 13. BEYOND1.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B421DD810BC00AF0869 /* 13. BEYOND1.WAV */; };
+		6C0B1B531DD810BC00AF0869 /* 14. BEYOND2.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B431DD810BC00AF0869 /* 14. BEYOND2.WAV */; };
+		6C0B1B541DD810BC00AF0869 /* 15. BEYOND3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B441DD810BC00AF0869 /* 15. BEYOND3.WAV */; };
+		6C0B1B551DD810BC00AF0869 /* 16. BEYOND4.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B451DD810BC00AF0869 /* 16. BEYOND4.WAV */; };
+		6C0B1B571DD811C500AF0869 /* mountain-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0B1B561DD811C500AF0869 /* mountain-cloud.png */; };
 		6CA641641DD6719600CAA819 /* mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CA641631DD6719600CAA819 /* mountain.png */; };
 		6CA641661DD676B900CAA819 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CA641651DD676B900CAA819 /* player.png */; };
 		6CA641681DD67B1D00CAA819 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA641671DD67B1D00CAA819 /* World.swift */; };
@@ -42,12 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6C0B1AAA1DD68E6C00AF0869 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Key.swift; path = ../Key.swift; sourceTree = "<group>"; };
-		6C0B1AAC1DD69B9000AF0869 /* test-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "test-bg.png"; path = "resources/texture/test-bg.png"; sourceTree = "<group>"; };
-		6C0B1AAE1DD6C4D500AF0869 /* world-1-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "world-1-bg.png"; path = "resources/texture/world-1-bg.png"; sourceTree = "<group>"; };
-		6C0B1AAF1DD6C4D500AF0869 /* world-2-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "world-2-bg.png"; path = "resources/texture/world-2-bg.png"; sourceTree = "<group>"; };
 		6C0B1AB21DD6D23B00AF0869 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		6C0B1AB41DD703CB00AF0869 /* Obstacle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
+		6C0B1AB41DD703CB00AF0869 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		6C0B1AB61DD7055900AF0869 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = resources/texture/ball.png; sourceTree = "<group>"; };
 		6C0B1ABA1DD7A20200AF0869 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		6C0B1AD31DD7B5E600AF0869 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -62,6 +77,29 @@
 		6C0B1ADF1DD7C6A200AF0869 /* 10.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 10.WAV; sourceTree = "<group>"; };
 		6C0B1AE01DD7C6A200AF0869 /* 11.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 11.WAV; sourceTree = "<group>"; };
 		6C0B1AEC1DD7C74000AF0869 /* 01.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 01.WAV; sourceTree = "<group>"; };
+		6C0B1B241DD7D9E000AF0869 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = resources/texture/background.png; sourceTree = "<group>"; };
+		6C0B1B281DD7DFA700AF0869 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cloud.png; path = resources/texture/cloud.png; sourceTree = "<group>"; };
+		6C0B1B2A1DD7EEDE00AF0869 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
+		6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
+		6C0B1B311DD8042300AF0869 /* crystals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crystals.png; path = resources/texture/crystals.png; sourceTree = "<group>"; };
+		6C0B1B361DD810BC00AF0869 /* 01. CLOUD1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "01. CLOUD1.WAV"; sourceTree = "<group>"; };
+		6C0B1B371DD810BC00AF0869 /* 02. CLOUD2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "02. CLOUD2.WAV"; sourceTree = "<group>"; };
+		6C0B1B381DD810BC00AF0869 /* 03. CLOUD3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "03. CLOUD3.WAV"; sourceTree = "<group>"; };
+		6C0B1B391DD810BC00AF0869 /* 04. CLOUD4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "04. CLOUD4.WAV"; sourceTree = "<group>"; };
+		6C0B1B3A1DD810BC00AF0869 /* 05. SPACE1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "05. SPACE1.WAV"; sourceTree = "<group>"; };
+		6C0B1B3B1DD810BC00AF0869 /* 06. SPACE2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "06. SPACE2.WAV"; sourceTree = "<group>"; };
+		6C0B1B3C1DD810BC00AF0869 /* 07. SPACE3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "07. SPACE3.WAV"; sourceTree = "<group>"; };
+		6C0B1B3D1DD810BC00AF0869 /* 08. SPACE4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "08. SPACE4.WAV"; sourceTree = "<group>"; };
+		6C0B1B3E1DD810BC00AF0869 /* 09. MACHINE1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "09. MACHINE1.WAV"; sourceTree = "<group>"; };
+		6C0B1B3F1DD810BC00AF0869 /* 10. MACHINE2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "10. MACHINE2.WAV"; sourceTree = "<group>"; };
+		6C0B1B401DD810BC00AF0869 /* 11. MACHINE3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "11. MACHINE3.WAV"; sourceTree = "<group>"; };
+		6C0B1B411DD810BC00AF0869 /* 12. MACHINE4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "12. MACHINE4.WAV"; sourceTree = "<group>"; };
+		6C0B1B421DD810BC00AF0869 /* 13. BEYOND1.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "13. BEYOND1.WAV"; sourceTree = "<group>"; };
+		6C0B1B431DD810BC00AF0869 /* 14. BEYOND2.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "14. BEYOND2.WAV"; sourceTree = "<group>"; };
+		6C0B1B441DD810BC00AF0869 /* 15. BEYOND3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "15. BEYOND3.WAV"; sourceTree = "<group>"; };
+		6C0B1B451DD810BC00AF0869 /* 16. BEYOND4.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "16. BEYOND4.WAV"; sourceTree = "<group>"; };
+		6C0B1B561DD811C500AF0869 /* mountain-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mountain-cloud.png"; path = "resources/texture/mountain-cloud.png"; sourceTree = "<group>"; };
 		6CA641631DD6719600CAA819 /* mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mountain.png; path = resources/texture/mountain.png; sourceTree = "<group>"; };
 		6CA641651DD676B900CAA819 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = resources/texture/player.png; sourceTree = "<group>"; };
 		6CA641671DD67B1D00CAA819 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
@@ -108,16 +146,114 @@
 			path = resources/sound/music;
 			sourceTree = "<group>";
 		};
+		6C0B1B101DD7CCF800AF0869 /* effects */ = {
+			isa = PBXGroup;
+			children = (
+				6C0B1B361DD810BC00AF0869 /* 01. CLOUD1.WAV */,
+				6C0B1B371DD810BC00AF0869 /* 02. CLOUD2.WAV */,
+				6C0B1B381DD810BC00AF0869 /* 03. CLOUD3.WAV */,
+				6C0B1B391DD810BC00AF0869 /* 04. CLOUD4.WAV */,
+				6C0B1B3A1DD810BC00AF0869 /* 05. SPACE1.WAV */,
+				6C0B1B3B1DD810BC00AF0869 /* 06. SPACE2.WAV */,
+				6C0B1B3C1DD810BC00AF0869 /* 07. SPACE3.WAV */,
+				6C0B1B3D1DD810BC00AF0869 /* 08. SPACE4.WAV */,
+				6C0B1B3E1DD810BC00AF0869 /* 09. MACHINE1.WAV */,
+				6C0B1B3F1DD810BC00AF0869 /* 10. MACHINE2.WAV */,
+				6C0B1B401DD810BC00AF0869 /* 11. MACHINE3.WAV */,
+				6C0B1B411DD810BC00AF0869 /* 12. MACHINE4.WAV */,
+				6C0B1B421DD810BC00AF0869 /* 13. BEYOND1.WAV */,
+				6C0B1B431DD810BC00AF0869 /* 14. BEYOND2.WAV */,
+				6C0B1B441DD810BC00AF0869 /* 15. BEYOND3.WAV */,
+				6C0B1B451DD810BC00AF0869 /* 16. BEYOND4.WAV */,
+			);
+			name = effects;
+			path = resources/sound/music;
+			sourceTree = "<group>";
+		};
+		6C0B1B111DD7CD7300AF0869 /* worlds */ = {
+			isa = PBXGroup;
+			children = (
+				6C0B1B241DD7D9E000AF0869 /* background.png */,
+				6C0B1B311DD8042300AF0869 /* crystals.png */,
+				6C0B1B1C1DD7CDBE00AF0869 /* space */,
+				6C0B1B1B1DD7CDB400AF0869 /* clouds */,
+				6C0B1B1A1DD7CDA600AF0869 /* mountain */,
+			);
+			name = worlds;
+			sourceTree = "<group>";
+		};
+		6C0B1B1A1DD7CDA600AF0869 /* mountain */ = {
+			isa = PBXGroup;
+			children = (
+				6CA641631DD6719600CAA819 /* mountain.png */,
+				6C0B1B561DD811C500AF0869 /* mountain-cloud.png */,
+			);
+			name = mountain;
+			sourceTree = "<group>";
+		};
+		6C0B1B1B1DD7CDB400AF0869 /* clouds */ = {
+			isa = PBXGroup;
+			children = (
+				6C0B1B281DD7DFA700AF0869 /* cloud.png */,
+			);
+			name = clouds;
+			sourceTree = "<group>";
+		};
+		6C0B1B1C1DD7CDBE00AF0869 /* space */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = space;
+			sourceTree = "<group>";
+		};
+		6C0B1B1D1DD7CDC800AF0869 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				6CA641651DD676B900CAA819 /* player.png */,
+				6C0B1AB61DD7055900AF0869 /* ball.png */,
+			);
+			name = entities;
+			sourceTree = "<group>";
+		};
+		6C0B1B1E1DD7CDE000AF0869 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				6CB132551DD65EE9000CF128 /* GameWindowController.swift */,
+				6CD3911A1DD6586000A70400 /* AppDelegate.swift */,
+				6CB1325D1DD662E0000CF128 /* GameScene.sks */,
+				6CD391221DD6586000A70400 /* ViewController.swift */,
+				6CD391241DD6586000A70400 /* Assets.xcassets */,
+				6CD391261DD6586000A70400 /* Main.storyboard */,
+				6CD391291DD6586000A70400 /* Info.plist */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		6C0B1B1F1DD7CDF300AF0869 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				6CEADF701DD65BC700C49EFA /* Constants.swift */,
+				6CD391201DD6586000A70400 /* GameScene.swift */,
+				6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */,
+				6C0B1ABA1DD7A20200AF0869 /* MusicPlayer.swift */,
+				6C0B1AB41DD703CB00AF0869 /* Coin.swift */,
+				6C0B1B2A1DD7EEDE00AF0869 /* Key.swift */,
+				6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */,
+				6C0B1AB21DD6D23B00AF0869 /* Player.swift */,
+				6CB132571DD6603F000CF128 /* Sprite.swift */,
+				6C0B1AD31DD7B5E600AF0869 /* Track.swift */,
+				6CA641671DD67B1D00CAA819 /* World.swift */,
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
 		6CB1325F1DD665A4000CF128 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C0B1B101DD7CCF800AF0869 /* effects */,
 				6C0B1AD51DD7C6A200AF0869 /* music */,
-				6C0B1AAE1DD6C4D500AF0869 /* world-1-bg.png */,
-				6C0B1AAF1DD6C4D500AF0869 /* world-2-bg.png */,
-				6C0B1AAC1DD69B9000AF0869 /* test-bg.png */,
-				6CA641651DD676B900CAA819 /* player.png */,
-				6C0B1AB61DD7055900AF0869 /* ball.png */,
-				6CA641631DD6719600CAA819 /* mountain.png */,
+				6C0B1B1D1DD7CDC800AF0869 /* entities */,
+				6C0B1B111DD7CD7300AF0869 /* worlds */,
 			);
 			name = resources;
 			path = "Heavy Mountain";
@@ -143,22 +279,8 @@
 		6CD391191DD6586000A70400 /* Heavy Mountain */ = {
 			isa = PBXGroup;
 			children = (
-				6C0B1AAA1DD68E6C00AF0869 /* Key.swift */,
-				6CB132551DD65EE9000CF128 /* GameWindowController.swift */,
-				6CEADF701DD65BC700C49EFA /* Constants.swift */,
-				6CD3911A1DD6586000A70400 /* AppDelegate.swift */,
-				6CD391201DD6586000A70400 /* GameScene.swift */,
-				6C0B1ABA1DD7A20200AF0869 /* MusicPlayer.swift */,
-				6C0B1AD31DD7B5E600AF0869 /* Track.swift */,
-				6CA641671DD67B1D00CAA819 /* World.swift */,
-				6CB132571DD6603F000CF128 /* Sprite.swift */,
-				6C0B1AB41DD703CB00AF0869 /* Obstacle.swift */,
-				6C0B1AB21DD6D23B00AF0869 /* Player.swift */,
-				6CB1325D1DD662E0000CF128 /* GameScene.sks */,
-				6CD391221DD6586000A70400 /* ViewController.swift */,
-				6CD391241DD6586000A70400 /* Assets.xcassets */,
-				6CD391261DD6586000A70400 /* Main.storyboard */,
-				6CD391291DD6586000A70400 /* Info.plist */,
+				6C0B1B1E1DD7CDE000AF0869 /* app */,
+				6C0B1B1F1DD7CDF300AF0869 /* game */,
 			);
 			path = "Heavy Mountain";
 			sourceTree = "<group>";
@@ -223,25 +345,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0B1B4D1DD810BC00AF0869 /* 08. SPACE4.WAV in Resources */,
 				6C0B1AEB1DD7C6A200AF0869 /* 11.WAV in Resources */,
 				6C0B1AE41DD7C6A200AF0869 /* 04.WAV in Resources */,
+				6C0B1B531DD810BC00AF0869 /* 14. BEYOND2.WAV in Resources */,
 				6CB1325E1DD662E0000CF128 /* GameScene.sks in Resources */,
+				6C0B1B471DD810BC00AF0869 /* 02. CLOUD2.WAV in Resources */,
 				6C0B1AE31DD7C6A200AF0869 /* 03.WAV in Resources */,
+				6C0B1B511DD810BC00AF0869 /* 12. MACHINE4.WAV in Resources */,
+				6C0B1B501DD810BC00AF0869 /* 11. MACHINE3.WAV in Resources */,
+				6C0B1B551DD810BC00AF0869 /* 16. BEYOND4.WAV in Resources */,
+				6C0B1B4F1DD810BC00AF0869 /* 10. MACHINE2.WAV in Resources */,
+				6C0B1B4A1DD810BC00AF0869 /* 05. SPACE1.WAV in Resources */,
+				6C0B1B331DD8042300AF0869 /* crystals.png in Resources */,
+				6C0B1B541DD810BC00AF0869 /* 15. BEYOND3.WAV in Resources */,
 				6C0B1AE51DD7C6A200AF0869 /* 05.WAV in Resources */,
 				6C0B1AE21DD7C6A200AF0869 /* 02.WAV in Resources */,
-				6C0B1AB01DD6C4D500AF0869 /* world-1-bg.png in Resources */,
 				6C0B1AB71DD7055900AF0869 /* ball.png in Resources */,
+				6C0B1B4C1DD810BC00AF0869 /* 07. SPACE3.WAV in Resources */,
+				6C0B1B4E1DD810BC00AF0869 /* 09. MACHINE1.WAV in Resources */,
 				6CA641661DD676B900CAA819 /* player.png in Resources */,
 				6CA641641DD6719600CAA819 /* mountain.png in Resources */,
 				6C0B1AE71DD7C6A200AF0869 /* 07.WAV in Resources */,
 				6C0B1AE61DD7C6A200AF0869 /* 06.WAV in Resources */,
+				6C0B1B571DD811C500AF0869 /* mountain-cloud.png in Resources */,
+				6C0B1B4B1DD810BC00AF0869 /* 06. SPACE2.WAV in Resources */,
+				6C0B1B251DD7D9E000AF0869 /* background.png in Resources */,
+				6C0B1B481DD810BC00AF0869 /* 03. CLOUD3.WAV in Resources */,
+				6C0B1B521DD810BC00AF0869 /* 13. BEYOND1.WAV in Resources */,
+				6C0B1B491DD810BC00AF0869 /* 04. CLOUD4.WAV in Resources */,
 				6C0B1AEA1DD7C6A200AF0869 /* 10.WAV in Resources */,
 				6CD391251DD6586000A70400 /* Assets.xcassets in Resources */,
 				6C0B1AE91DD7C6A200AF0869 /* 09.WAV in Resources */,
+				6C0B1B291DD7DFA700AF0869 /* cloud.png in Resources */,
+				6C0B1B461DD810BC00AF0869 /* 01. CLOUD1.WAV in Resources */,
 				6C0B1AED1DD7C74000AF0869 /* 01.WAV in Resources */,
-				6C0B1AAD1DD69B9000AF0869 /* test-bg.png in Resources */,
 				6C0B1AE81DD7C6A200AF0869 /* 08.WAV in Resources */,
-				6C0B1AB11DD6C4D500AF0869 /* world-2-bg.png in Resources */,
 				6CD391281DD6586000A70400 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,14 +394,16 @@
 			files = (
 				6C0B1ABB1DD7A20200AF0869 /* MusicPlayer.swift in Sources */,
 				6CB132581DD6603F000CF128 /* Sprite.swift in Sources */,
-				6C0B1AAB1DD68E6C00AF0869 /* Key.swift in Sources */,
-				6C0B1AB51DD703CB00AF0869 /* Obstacle.swift in Sources */,
+				6C0B1AB51DD703CB00AF0869 /* Coin.swift in Sources */,
+				6C0B1B2F1DD7F28F00AF0869 /* Hud.swift in Sources */,
 				6CD391231DD6586000A70400 /* ViewController.swift in Sources */,
 				6CD391211DD6586000A70400 /* GameScene.swift in Sources */,
+				6C0B1B2C1DD7EEDE00AF0869 /* Key.swift in Sources */,
 				6CB132561DD65EE9000CF128 /* GameWindowController.swift in Sources */,
 				6CD3911B1DD6586000A70400 /* AppDelegate.swift in Sources */,
 				6CA641681DD67B1D00CAA819 /* World.swift in Sources */,
 				6C0B1AB31DD6D23B00AF0869 /* Player.swift in Sources */,
+				6C0B1B2D1DD7EEDE00AF0869 /* SoundEffect.swift in Sources */,
 				6CEADF711DD65BC700C49EFA /* Constants.swift in Sources */,
 				6C0B1AD41DD7B5E600AF0869 /* Track.swift in Sources */,
 			);
@@ -380,6 +521,7 @@
 				DEVELOPMENT_TEAM = 9YKP257BLS;
 				INFOPLIST_FILE = "Heavy Mountain/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "website.trash.calcade.Heavy-Mountain";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -394,6 +536,7 @@
 				DEVELOPMENT_TEAM = 9YKP257BLS;
 				INFOPLIST_FILE = "Heavy Mountain/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "website.trash.calcade.Heavy-Mountain";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

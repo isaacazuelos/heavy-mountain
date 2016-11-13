@@ -10,11 +10,10 @@ import Foundation
 
 struct Track {
     let number: UInt8
-    
     static let noTrack: Track = Track(number: 0)
     
     static let transition3:  CGFloat = 650
-    static let transition4:  CGFloat = 1000
+    static let transition4:  CGFloat = 915
     static let transition7:  CGFloat = 7000
     static let transition8:  CGFloat = 8000
     static let transition10: CGFloat = 10000

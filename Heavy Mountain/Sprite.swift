@@ -20,7 +20,6 @@ class Sprite: SKSpriteNode {
         let texture = SKTexture(imageNamed: name)
         super.init(texture: texture, color: .black, size: texture.size())
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -31,7 +30,6 @@ class BackgroundSprite: Sprite {
         super.init(imageNamed: name)
         self.anchorPoint = .zero
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -19,4 +19,5 @@ enum Key: UInt16 {
     
     // letters
     case r = 15
+    case b = 11
 }

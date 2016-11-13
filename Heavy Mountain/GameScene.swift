@@ -20,7 +20,7 @@ class GameScene: SKScene {
     // our world node, which we pan to move the world relative to the camera/scene
     let world = World()
     // our hud node, which is fixed relative to the scene
-    let hud = SKNode()
+    let hud = Hud()
     
     var keysPressed = Set<Key>()
     
@@ -33,6 +33,7 @@ class GameScene: SKScene {
         
         self.addChild(world)
         self.addChild(hud)
+        hud.zPosition = 100000
         
         // Collisions don't really happen in the hud, so we'll make the delegate the world.
         self.physicsWorld.contactDelegate = world
@@ -44,6 +45,7 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         let delta = currentTime - lastTime
         world.update(with: delta, and: keysPressed)
+        hud.update(with: world)
     }
     
     // MARK: - Inputs
