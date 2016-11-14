@@ -28,8 +28,23 @@ class Sprite: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     func scaleWidth(to width: CGFloat) {
-        let height = (width / self.size.width) * self.size.height
-        self.scale(to: CGSize(width: width, height: height))
+        let ratio = (width / self.size.width)
+        self.setScale(ratio)
+    }
+}
+
+class AnimatedSprite: Sprite {
+    var textures: [SKTexture]
+    init(animateWith textures: [SKTexture]) {
+        self.textures = textures
+        super.init(imageNamed: "ball.png")
+        self.setupAnimation()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    func setupAnimation() {
+        run(SKAction.repeatForever(SKAction.animate(with: textures, timePerFrame: 0.2)))
     }
 }
 

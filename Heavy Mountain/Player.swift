@@ -9,32 +9,24 @@
 import Foundation
 import SpriteKit
 
-class Player: Sprite {
+class Player: AnimatedSprite {
+    
+    static let boundries: [CGFloat] = [265, 618, 907, 1195, 1563]
     static let verticalImpulse: CGFloat = 1.0
-    static let textureNames = [
-        "player-frame-1.png",
-        "player-frame-2.png",
-        "player-frame-3.png",
-        "player-frame-4.png",
-        "player-frame-5.png",
-        "player-frame-4.png",
-        "player-frame-3.png",
-        "player-frame-2.png",
-    ]
+    static let textureNames = (1...9).map { String(format: "playerFrame%03d.png", $0) }
     var hasGoneUp = false
-    let textures = Player.textureNames.map({ SKTexture(imageNamed: $0) })
+    var coinCount: Int = 0
     init(position: CGPoint) {
+
+        let textures = Player.textureNames.map({ SKTexture(imageNamed: $0) })
+        super.init(animateWith: textures)
         
-        let firstTexture = textures.first!
-        
-        super.init(imageNamed: Player.textureNames.first!)
-        
-        self.scale(to: GameConstants.playerSize)
+        self.scaleWidth(to: GameConstants.playerSize.width)
         
         anchorPoint = CGPoint(x:0.5, y:0.5)
         self.position = position
         
-        self.physicsBody = SKPhysicsBody(texture: firstTexture, size: self.size)
+        self.physicsBody = SKPhysicsBody(texture: textures.first!, size: self.size)
         self.physicsBody?.allowsRotation = false
         self.physicsBody?.usesPreciseCollisionDetection = true
         self.physicsBody?.affectedByGravity = false // set to true when they try to lift off.
@@ -42,16 +34,11 @@ class Player: Sprite {
         self.physicsBody?.collisionBitMask = .player
         self.physicsBody?.contactTestBitMask = .player | .obstacle
         self.physicsBody?.linearDamping = GameConstants.playerFiction
-        
-        setupAnimation()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func setupAnimation() {
-        run(SKAction.repeatForever(SKAction.animate(with: textures, timePerFrame: 0.3)))
-    }
-    func clampPosition() {
+    func clampPositionInGame() {
         if let body = self.physicsBody {
             if self.position.x <= 0 {
                 body.velocity.dx = max(body.velocity.dx, 0)
@@ -84,25 +71,21 @@ class Player: Sprite {
     }
     func setRotation() {
         
-        if self.physicsBody?.velocity == .zero {
-            self.zRotation = CGFloat.pi / 2
+        if !hasGoneUp {
+            self.zRotation = 0
+            return
         }
         
-//        let h = GameConstants.playerMaxHorizontalSpeed
         guard let x = self.physicsBody?.velocity.dx else { return }
         guard let y = self.physicsBody?.velocity.dy else { return }
-////        let π = CGFloat.pi
-//                        // [-h  .. h]
-//        v = v + h       // [0   .. 2h]
-//        v = v / (2 * h) // [0   .. 1]
-//        v = v * (π / 2) // [0   .. π/2]
-//        v = (π / 4) - v // [π/4 .. 3π/4]
         self.zRotation = atan2(y, x) - (CGFloat.pi / 2)
     }
-    
     func update(with delta: TimeInterval, and keys: Set<Key>) {
-
+ 
+        if keys.contains(Key.r) { coinCount += 1 }
+        
         if !hasGoneUp && keys.contains(Key.up) {
+            hasGoneUp = true
             self.physicsBody?.affectedByGravity = true
         }
         
@@ -127,15 +110,26 @@ class Player: Sprite {
             self.physicsBody?.applyImpulse(CGVector(dx:-impulse, dy:0.0))
 
         }
-        if !keys.contains(Key.b) {
-            clampVerticalVelocity()
-        }
+        if !keys.contains(Key.b) { clampVerticalVelocity() }
         clampHorizontalVelocity()
-        clampPosition()
+        clampPositionInGame()
+        if !keys.contains(Key.b) { applyCoinRestrictions() }
+        
         setRotation()
     }
     func collected(coin: Coin) {
-        print("coin collected")
+        if !coin.collected { self.coinCount += 1 }
         self.physicsBody?.applyForce(CGVector(dx: 0.0, dy: GameConstants.coinBoost))
+    }
+    func applyCoinRestrictions() {
+        if coinCount >= GameConstants.coins.count {
+            return
+        }
+        let index = Int(floor(Float(coinCount) / 4.0))
+        
+        if index < Player.boundries.count {
+            let maxHeight = Player.boundries[index]
+            position.y = min(position.y, maxHeight)
+        }
     }
 }

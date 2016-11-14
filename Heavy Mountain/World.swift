@@ -50,6 +50,12 @@ class World: SKNode {
         boundries.zPosition = .foreground
         self.addChild(boundries)
         
+        // beyond
+        let beyond = BackgroundSprite(imageNamed: "beyond.png")
+        beyond.zPosition = .foreground
+        beyond.position.y = 1000
+        self.addChild(beyond)
+        
         // player
         player = Player(position: CGPoint(x: GameConstants.pixelWidth / 2, y: GameConstants.pixelHeight / 4))
         
@@ -59,23 +65,17 @@ class World: SKNode {
         }
     }
     override func mouseDown(with event: NSEvent) {
-        let ball = Coin(
-            imageNamed: GameConstants.ballName,
-            position: event.location(in: self),
-            with: SoundEffect(fileName: GameConstants.testSoundEffectFileName))
-        ball.name = "ball"
-        ball.zPosition = 100
-        addChild(ball)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     func update(with delta: TimeInterval, and keys: Set<Key>) {
-        if keys.contains(Key.r) { // remove all balls
-            removeChildren(in: children.filter { $0.name == "ball"})
+        guard let player = player else { return }
+        
+        if player.coinCount >= GameConstants.coins.count {
+            self.scene?.physicsWorld.gravity.dy = GameConstants.warpSpeed
         }
         
-        guard let player = player else { return }
         player.update(with: delta, and: keys)
         self.positionCamera()
     }
@@ -84,25 +84,18 @@ class World: SKNode {
         
         let playerPositionInFrame = self.convert(player.position, to: parent)
 
+        // up
         if playerPositionInFrame.y > GameConstants.panUpBoundry {
             self.position.y -= playerPositionInFrame.y - GameConstants.panUpBoundry
         }
-        if (playerPositionInFrame.y < GameConstants.panDownBoundry)
-                && (player.position.y > GameConstants.panDownBoundry) {
-            self.position.y += GameConstants.panDownBoundry - playerPositionInFrame.y
+        // down
+        if (playerPositionInFrame.y <= GameConstants.panDownBoundry) {
+            position.y = min(0, position.y - (playerPositionInFrame.y - GameConstants.panDownBoundry))
         }
-        // TODO: Fix properly
-        // right now, when moving down, there's an issue if the player just get's slammed down into the bottom, where it doesn't pan the world down all the way. This is just a cheap, but chop-inducing fix.
-        if player.position.y == 0 {
-            self.position.y = 0
-        }
-        
-        // Horizontal Panning
         // left
         if playerPositionInFrame.x <= GameConstants.panHorizonalMargin {
             self.position.x = min(0, self.position.x - (playerPositionInFrame.x - GameConstants.panHorizonalMargin))
         }
-        
         // right
         let rightMargin = GameConstants.pixelWidth - GameConstants.panHorizonalMargin
         if playerPositionInFrame.x >= rightMargin {

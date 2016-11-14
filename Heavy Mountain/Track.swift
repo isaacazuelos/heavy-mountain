@@ -12,11 +12,11 @@ struct Track {
     let number: UInt8
     static let noTrack: Track = Track(number: 0)
     
-    static let transition3:  CGFloat = 650
-    static let transition4:  CGFloat = 915
-    static let transition7:  CGFloat = 7000
-    static let transition8:  CGFloat = 8000
-    static let transition10: CGFloat = 10000
+    static let transition3:  CGFloat = 618
+    static let transition4:  CGFloat = 907
+    static let transition7:  CGFloat = 1195
+    static let transition8:  CGFloat = 2000
+    static let transition10: CGFloat = 5000
     
     var url: URL? {
         let name: String
@@ -53,7 +53,7 @@ struct Track {
         case 8:  return Track(number: y >= Track.transition8 ? 9 : 8)
         case 9:  return Track(number: 10)
         case 10: return Track(number: 11)
-        case 11: return Track(number: 11)
+        case 11: return Track.noTrack
         default: return Track.noTrack
         }
     }

@@ -11,22 +11,21 @@ import SpriteKit
 
 class Hud: SKNode {
 
-    var highestPoint: Int = 0
-    let highestPointLabel: SKLabelNode
+    let coinCountLabel: SKLabelNode
     
     override init() {
-        highestPointLabel = SKLabelNode(fontNamed: "Futura")
+        coinCountLabel = SKLabelNode(fontNamed: "Futura")
         
-        highestPointLabel.fontSize = 10
-        highestPointLabel.verticalAlignmentMode = .top
-        highestPointLabel.horizontalAlignmentMode = .left
+        coinCountLabel.fontSize = 12
+        coinCountLabel.verticalAlignmentMode = .top
+        coinCountLabel.horizontalAlignmentMode = .left
         
         let y = Int(floor(GameConstants.pixelHeight))
         
-        highestPointLabel.position = CGPoint(x: 0, y: y)
-        highestPointLabel.zPosition = 100000000
+        coinCountLabel.position = CGPoint(x: 0, y: y)
+        coinCountLabel.zPosition = 100000000
         super.init()
-        addChild(highestPointLabel)
+        addChild(coinCountLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,9 +33,6 @@ class Hud: SKNode {
     }
     
     func update(with world: World) {
-        if let player = world.player {
-            highestPoint = max(highestPoint, Int(player.position.y))
-        }
-        highestPointLabel.text = "highest: \(highestPoint)"
+        coinCountLabel.text = "crystals: \(world.player?.coinCount ?? 0)"
     }
 }

@@ -9,25 +9,54 @@
 import Foundation
 import SpriteKit
 
-class Coin: Sprite {
+enum CoinType {
+    case mountain
+    case cloud
+    case space
+    case machine
+    case beyond
     
+    var fileNames: [String] {
+        var res = Array<String>()
+        let world: String
+        switch self {
+        case .mountain: world = "W1"
+        case .cloud: world = "W2"
+        case .space: world = "W3"
+        case .machine: world = "W4"
+        case .beyond: world = "W5"
+        }
+        for i in 1...12 {
+            res.append(String(format: "\(world)Frame%03d.png", i))
+        }
+        return res
+    }
+    
+    var textures: [SKTexture] { return fileNames.map({ SKTexture(imageNamed: $0) }) }
+}
+
+class Coin: AnimatedSprite {
+    
+    static let physicsTexture = SKTexture(imageNamed: "coin-physics.png")
     let effect: SoundEffect
     
-    init(imageNamed name: String, position: CGPoint, with effect: SoundEffect) {
+    var collected = false
+    
+    init(type: CoinType, position: CGPoint, with effect: SoundEffect) {
         self.effect = effect
 
-        super.init(imageNamed: name)
+        super.init(animateWith: type.textures)
 
-        self.position = position
+        self.position.x = position.x + 13
+        self.position.y = position.y - 21
+        self.size = GameConstants.coinSize
         
-        if let texture = self.texture {
-            self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
-            self.physicsBody?.categoryBitMask    = .obstacle
-            self.physicsBody?.collisionBitMask   = .player
-            self.physicsBody?.contactTestBitMask = .player | .obstacle
-            self.physicsBody?.affectedByGravity  = false
-            self.physicsBody?.allowsRotation     = false
-        }
+        self.physicsBody = SKPhysicsBody(texture: Coin.physicsTexture, size: GameConstants.coinSize)
+        self.physicsBody?.categoryBitMask    = .obstacle
+        self.physicsBody?.collisionBitMask   = .player
+        self.physicsBody?.contactTestBitMask = .player | .obstacle
+        self.physicsBody?.affectedByGravity  = false
+        self.physicsBody?.allowsRotation     = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,6 +64,7 @@ class Coin: Sprite {
     }
     
     func wasCollected() {
+        self.collected = true
         if let parent = self.parent {
             effect.play(on: parent)
         }
