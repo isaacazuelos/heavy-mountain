@@ -72,37 +72,37 @@ namespace CalCade
             graphicsDeviceManager.IsFullScreen = FullScreenMode;
             graphicsDeviceManager.ApplyChanges();
 
-            coins.Add(new Coin(CoinType.mountain, new Vector2(125, 181), "01. CLOUD1"));
-            coins.Add(new Coin(CoinType.mountain, new Vector2(127, 113), "02. CLOUD2"));
-            coins.Add(new Coin(CoinType.mountain, new Vector2(215, 223), "03. CLOUD3"));
-            coins.Add(new Coin(CoinType.mountain, new Vector2(112, 254), "04. CLOUD4"));
+            coins.Add(new Coin(CoinType.mountain, new Vector2(125, 181), "cloud1"));
+            coins.Add(new Coin(CoinType.mountain, new Vector2(127, 113), "cloud2"));
+            coins.Add(new Coin(CoinType.mountain, new Vector2(215, 223), "cloud3"));
+            coins.Add(new Coin(CoinType.mountain, new Vector2(112, 254), "cloud4"));
 
-            coins.Add(new Coin(CoinType.cloud, new Vector2(134, 481), "01. CLOUD1"));
-            coins.Add(new Coin(CoinType.cloud, new Vector2(160, 604), "02. CLOUD2"));
-            coins.Add(new Coin(CoinType.cloud, new Vector2(21, 495), "03. CLOUD3"));
-            coins.Add(new Coin(CoinType.cloud, new Vector2(227, 335), "04. CLOUD4"));
+            coins.Add(new Coin(CoinType.cloud, new Vector2(134, 481), "cloud1"));
+            coins.Add(new Coin(CoinType.cloud, new Vector2(160, 604), "cloud2"));
+            coins.Add(new Coin(CoinType.cloud, new Vector2(21, 495),  "cloud3"));
+            coins.Add(new Coin(CoinType.cloud, new Vector2(227, 335), "cloud4"));
 
-            coins.Add(new Coin(CoinType.space, new Vector2(167, 770), "05. SPACE1"));
-            coins.Add(new Coin(CoinType.space, new Vector2(64, 724), "06. SPACE2"));
-            coins.Add(new Coin(CoinType.space, new Vector2(235, 883), "07. SPACE3"));
-            coins.Add(new Coin(CoinType.space, new Vector2(54, 905), "08. SPACE4"));
+            coins.Add(new Coin(CoinType.space, new Vector2(167, 770), "space1"));
+            coins.Add(new Coin(CoinType.space, new Vector2(64, 724), "space2"));
+            coins.Add(new Coin(CoinType.space, new Vector2(235, 883), "space3"));
+            coins.Add(new Coin(CoinType.space, new Vector2(54, 905), "space4"));
 
-            coins.Add(new Coin(CoinType.machine, new Vector2(202, 978), "09. MACHINE1"));
-            coins.Add(new Coin(CoinType.machine, new Vector2(54, 944), "10. MACHINE2"));
-            coins.Add(new Coin(CoinType.machine, new Vector2(104, 1058), "11. MACHINE3"));
-            coins.Add(new Coin(CoinType.machine, new Vector2(191, 1154), "12. MACHINE4"));
+            coins.Add(new Coin(CoinType.machine, new Vector2(202, 978),  "machine1"));
+            coins.Add(new Coin(CoinType.machine, new Vector2(54, 944),   "machine2"));
+            coins.Add(new Coin(CoinType.machine, new Vector2(104, 1058), "machine3"));
+            coins.Add(new Coin(CoinType.machine, new Vector2(191, 1154), "machine4"));
 
-            coins.Add(new Coin(CoinType.beyond, new Vector2(150, 1295), "13. BEYOND1"));
-            coins.Add(new Coin(CoinType.beyond, new Vector2(93, 1329), "14. BEYOND2"));
-            coins.Add(new Coin(CoinType.beyond, new Vector2(212, 1537), "15. BEYOND3"));
-            coins.Add(new Coin(CoinType.beyond, new Vector2(48, 1510), "16. BEYOND4"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(150, 1295), "beyond1"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(93, 1329),  "beyond2"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(212, 1537), "beyond3"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(48, 1510),  "beyond4"));
 
-            coins.Add(new Coin(CoinType.beyond, new Vector2(119, 1682), "13. BEYOND1"));
-            coins.Add(new Coin(CoinType.beyond, new Vector2(74, 1772), "14. BEYOND2"));
-            coins.Add(new Coin(CoinType.beyond, new Vector2(204, 1650), "15. BEYOND3"));
-            coins.Add(new Coin(CoinType.beyond, new Vector2(184, 1868), "16. BEYOND4"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(119, 1682), "beyond1"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(74, 1772),  "beyond2"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(204, 1650), "beyond3"));
+            coins.Add(new Coin(CoinType.beyond, new Vector2(184, 1868), "beyond4"));
         }
-        
+
         protected override void LoadContent()
         {
             Pixel = new Texture2D(graphicsDeviceManager.GraphicsDevice, 1, 1);
@@ -127,7 +127,7 @@ namespace CalCade
                 LoadSound(coin.soundName, fullSoundPath);
             }
 
-            string coinPath = Path.Combine("textures", "coins");
+            string coinPath = Path.Combine("texture", "coins");
             foreach (var file in Directory.GetFiles(coinPath))
             {
                 string storageName = Path.GetFileName(file);
@@ -136,15 +136,15 @@ namespace CalCade
             }
 
             player.Textures = new List<Texture2D>();
-            player.Textures.Add(GetTexture("player-frames\\playerFrame001"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame002"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame003"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame004"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame005"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame006"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame007"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame008"));
-            player.Textures.Add(GetTexture("player-frames\\playerFrame009"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe001"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe002"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe003"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe004"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe005"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe006"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe007"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe008"));
+            player.Textures.Add(GetTexture("player-frames\\playerframe009"));
 
             player.position = new Vector2(
                 mapSize.X / 2f,
@@ -226,7 +226,7 @@ namespace CalCade
 
         public Texture2D GetTexture(string assetName)
         {
-            string name = Path.Combine("textures", assetName);
+            string name = Path.Combine("texture", assetName);
             FileStream fileStream = new FileStream(name + ".png", FileMode.Open, FileAccess.Read);
             Texture2D result = Texture2D.FromStream(GraphicsDevice, fileStream);
             allTextures.Add(result);

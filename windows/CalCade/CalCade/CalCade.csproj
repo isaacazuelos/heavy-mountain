@@ -78,9 +78,6 @@
   <ItemGroup>
     <Compile Include="CalCadeGame.cs" />
     <Compile Include="Coin.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="GameScene.cs" />
-    <Compile Include="Hud.cs" />
     <Compile Include="MusicPlayer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
@@ -92,309 +89,421 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="sounds\items\01. CLOUD1.WAV">
+    <Content Include="..\..\..\resources\sound\music\01.wav">
+      <Link>sounds\music\01.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\02. CLOUD2.WAV">
+    <Content Include="..\..\..\resources\sound\music\02.wav">
+      <Link>sounds\music\02.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\03. CLOUD3.WAV">
+    <Content Include="..\..\..\resources\sound\music\03.wav">
+      <Link>sounds\music\03.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\04. CLOUD4.WAV">
+    <Content Include="..\..\..\resources\sound\music\04.wav">
+      <Link>sounds\music\04.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\05. SPACE1.WAV">
+    <Content Include="..\..\..\resources\sound\music\05.wav">
+      <Link>sounds\music\05.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\06. SPACE2.WAV">
+    <Content Include="..\..\..\resources\sound\music\06.wav">
+      <Link>sounds\music\06.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\07. SPACE3.WAV">
+    <Content Include="..\..\..\resources\sound\music\07.wav">
+      <Link>sounds\music\07.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\08. SPACE4.WAV">
+    <Content Include="..\..\..\resources\sound\music\08.wav">
+      <Link>sounds\music\08.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\09. MACHINE1.WAV">
+    <Content Include="..\..\..\resources\sound\music\09.wav">
+      <Link>sounds\music\09.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\10. MACHINE2.WAV">
+    <Content Include="..\..\..\resources\sound\music\10.wav">
+      <Link>sounds\music\10.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\11. MACHINE3.WAV">
+    <Content Include="..\..\..\resources\sound\music\11.wav">
+      <Link>sounds\music\11.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\12. MACHINE4.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\beyond1.wav">
+      <Link>sounds\items\beyond1.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\13. BEYOND1.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\beyond2.wav">
+      <Link>sounds\items\beyond2.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\14. BEYOND2.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\beyond3.wav">
+      <Link>sounds\items\beyond3.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\15. BEYOND3.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\beyond4.wav">
+      <Link>sounds\items\beyond4.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\items\16. BEYOND4.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\cloud1.wav">
+      <Link>sounds\items\cloud1.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\01.wav">
+    <Content Include="..\..\..\resources\sound\sound-effects\cloud2.wav">
+      <Link>sounds\items\cloud2.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\02.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\cloud3.wav">
+      <Link>sounds\items\cloud3.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\03.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\cloud4.wav">
+      <Link>sounds\items\cloud4.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\04.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\machine1.wav">
+      <Link>sounds\items\machine1.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\05.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\machine2.wav">
+      <Link>sounds\items\machine2.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\06.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\machine3.wav">
+      <Link>sounds\items\machine3.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\07.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\machine4.wav">
+      <Link>sounds\items\machine4.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\08.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\space1.wav">
+      <Link>sounds\items\space1.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\09.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\space2.wav">
+      <Link>sounds\items\space2.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\10.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\space3.wav">
+      <Link>sounds\items\space3.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\music\11.WAV">
+    <Content Include="..\..\..\resources\sound\sound-effects\space4.wav">
+      <Link>sounds\items\space4.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\background.png">
+    <Content Include="..\..\..\resources\texture\background.png">
+      <Link>texture\background.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\beyond.png">
+    <Content Include="..\..\..\resources\texture\beyond.png">
+      <Link>texture\beyond.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\boundries.png">
+    <Content Include="..\..\..\resources\texture\boundries.png">
+      <Link>texture\boundries.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame001.png">
+    <Content Include="..\..\..\resources\texture\cloud.png">
+      <Link>texture\cloud.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame002.png">
+    <Content Include="..\..\..\resources\texture\coins\coin-physics.png">
+      <Link>texture\coins\coin-physics.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame003.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame001.png">
+      <Link>texture\coins\w1frame001.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame004.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame002.png">
+      <Link>texture\coins\w1frame002.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame005.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame003.png">
+      <Link>texture\coins\w1frame003.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame006.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame004.png">
+      <Link>texture\coins\w1frame004.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame007.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame005.png">
+      <Link>texture\coins\w1frame005.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame008.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame006.png">
+      <Link>texture\coins\w1frame006.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame009.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame007.png">
+      <Link>texture\coins\w1frame007.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame010.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame008.png">
+      <Link>texture\coins\w1frame008.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame011.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame009.png">
+      <Link>texture\coins\w1frame009.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W1Frame012.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame010.png">
+      <Link>texture\coins\w1frame010.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame001.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame011.png">
+      <Link>texture\coins\w1frame011.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame002.png">
+    <Content Include="..\..\..\resources\texture\coins\w1frame012.png">
+      <Link>texture\coins\w1frame012.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame003.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame001.png">
+      <Link>texture\coins\w2frame001.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame004.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame002.png">
+      <Link>texture\coins\w2frame002.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame005.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame003.png">
+      <Link>texture\coins\w2frame003.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame006.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame004.png">
+      <Link>texture\coins\w2frame004.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame007.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame005.png">
+      <Link>texture\coins\w2frame005.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame008.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame006.png">
+      <Link>texture\coins\w2frame006.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame009.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame007.png">
+      <Link>texture\coins\w2frame007.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame010.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame008.png">
+      <Link>texture\coins\w2frame008.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame011.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame009.png">
+      <Link>texture\coins\w2frame009.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W2Frame012.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame010.png">
+      <Link>texture\coins\w2frame010.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame001.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame011.png">
+      <Link>texture\coins\w2frame011.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame002.png">
+    <Content Include="..\..\..\resources\texture\coins\w2frame012.png">
+      <Link>texture\coins\w2frame012.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame003.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame001.png">
+      <Link>texture\coins\w3frame001.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame004.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame002.png">
+      <Link>texture\coins\w3frame002.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame005.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame003.png">
+      <Link>texture\coins\w3frame003.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame006.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame004.png">
+      <Link>texture\coins\w3frame004.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame007.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame005.png">
+      <Link>texture\coins\w3frame005.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame008.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame006.png">
+      <Link>texture\coins\w3frame006.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame009.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame007.png">
+      <Link>texture\coins\w3frame007.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame010.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame008.png">
+      <Link>texture\coins\w3frame008.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame011.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame009.png">
+      <Link>texture\coins\w3frame009.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W3Frame012.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame010.png">
+      <Link>texture\coins\w3frame010.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame001.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame011.png">
+      <Link>texture\coins\w3frame011.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame002.png">
+    <Content Include="..\..\..\resources\texture\coins\w3frame012.png">
+      <Link>texture\coins\w3frame012.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame003.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame001.png">
+      <Link>texture\coins\w4frame001.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame004.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame002.png">
+      <Link>texture\coins\w4frame002.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame005.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame003.png">
+      <Link>texture\coins\w4frame003.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame006.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame004.png">
+      <Link>texture\coins\w4frame004.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame007.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame005.png">
+      <Link>texture\coins\w4frame005.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame008.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame006.png">
+      <Link>texture\coins\w4frame006.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame009.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame007.png">
+      <Link>texture\coins\w4frame007.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame010.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame008.png">
+      <Link>texture\coins\w4frame008.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame011.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame009.png">
+      <Link>texture\coins\w4frame009.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W4Frame012.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame010.png">
+      <Link>texture\coins\w4frame010.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame001.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame011.png">
+      <Link>texture\coins\w4frame011.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame002.png">
+    <Content Include="..\..\..\resources\texture\coins\w4frame012.png">
+      <Link>texture\coins\w4frame012.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame003.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame001.png">
+      <Link>texture\coins\w5frame001.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame004.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame002.png">
+      <Link>texture\coins\w5frame002.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame005.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame003.png">
+      <Link>texture\coins\w5frame003.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame006.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame004.png">
+      <Link>texture\coins\w5frame004.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame007.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame005.png">
+      <Link>texture\coins\w5frame005.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame008.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame006.png">
+      <Link>texture\coins\w5frame006.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame009.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame007.png">
+      <Link>texture\coins\w5frame007.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame010.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame008.png">
+      <Link>texture\coins\w5frame008.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame011.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame009.png">
+      <Link>texture\coins\w5frame009.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\coins\W5Frame012.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame010.png">
+      <Link>texture\coins\w5frame010.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\mountain.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame011.png">
+      <Link>texture\coins\w5frame011.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame001.png">
+    <Content Include="..\..\..\resources\texture\coins\w5frame012.png">
+      <Link>texture\coins\w5frame012.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame002.png">
+    <Content Include="..\..\..\resources\texture\crystals.png">
+      <Link>texture\crystals.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame003.png">
+    <Content Include="..\..\..\resources\texture\mountain-cloud.png">
+      <Link>texture\mountain-cloud.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame004.png">
+    <Content Include="..\..\..\resources\texture\mountain.png">
+      <Link>texture\mountain.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame005.png">
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe001.png">
+      <Link>texture\player-frames\playerframe001.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame006.png">
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe002.png">
+      <Link>texture\player-frames\playerframe002.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame007.png">
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe003.png">
+      <Link>texture\player-frames\playerframe003.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame008.png">
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe004.png">
+      <Link>texture\player-frames\playerframe004.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player-frames\playerFrame009.png">
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe005.png">
+      <Link>texture\player-frames\playerframe005.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="textures\player.png">
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe006.png">
+      <Link>texture\player-frames\playerframe006.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe007.png">
+      <Link>texture\player-frames\playerframe007.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe008.png">
+      <Link>texture\player-frames\playerframe008.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\resources\texture\player-frames\playerframe009.png">
+      <Link>texture\player-frames\playerframe009.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

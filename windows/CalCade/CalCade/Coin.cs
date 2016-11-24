@@ -1,11 +1,3 @@
-////
-////  Obstacle.swift
-////  Heavy Mountain
-////
-////  Created by Isaac Azuelos on 2016-11-12.
-////  Copyright © 2016 Isaac Azuelos. All rights reserved.
-////
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -44,19 +36,19 @@ namespace CalCade
             switch (type)
             {
             case CoinType.mountain:
-                textureName = "W1";
+                textureName = "w1";
                 break;
             case CoinType.cloud:
-                textureName = "W2";
+                textureName = "w2";
                 break;
             case CoinType.space:
-                textureName = "W3";
+                textureName = "w3";
                 break;
             case CoinType.machine:
-                textureName = "W4";
+                textureName = "w4";
                 break;
             case CoinType.beyond:
-                textureName = "W5";
+                textureName = "w5";
                 break;
             }
 
@@ -65,7 +57,7 @@ namespace CalCade
             int frame = (int)Math.Floor(gameTime.TotalGameTime.TotalSeconds / frameTime);
             frame %= numFrames;
             frame++;
-            textureName += "Frame" + frame.ToString("D3");
+            textureName += "frame" + frame.ToString("D3");
 
             result = textures.First(x => x.Name == textureName).Texture;
 
