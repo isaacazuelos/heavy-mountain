@@ -1,9 +1,3 @@
-//
-//  MusicPlayer.swift
-//  Heavy Mountain
-//
-//  Created by Isaac Azuelos on 2016-11-12.
-//
 //  This is pretty inspired by SKTAudio.swift from
 //  <https://github.com/raywenderlich/SKTUtils/>
 
