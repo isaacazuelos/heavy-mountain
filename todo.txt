@@ -1,7 +1,0 @@
-# Todo
-
-* Animate Player
-* Coins
-  * Place Remaining
-  * Animate
-* Coin Gates? 

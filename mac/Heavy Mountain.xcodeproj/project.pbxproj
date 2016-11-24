@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C0B1AB31DD6D23B00AF0869 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AB21DD6D23B00AF0869 /* Player.swift */; };
+		6C0B1AB51DD703CB00AF0869 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AB41DD703CB00AF0869 /* Coin.swift */; };
+		6C0B1ABB1DD7A20200AF0869 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1ABA1DD7A20200AF0869 /* MusicPlayer.swift */; };
+		6C0B1AD41DD7B5E600AF0869 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1AD31DD7B5E600AF0869 /* Track.swift */; };
+		6C0B1B2C1DD7EEDE00AF0869 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2A1DD7EEDE00AF0869 /* Key.swift */; };
+		6C0B1B2D1DD7EEDE00AF0869 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */; };
+		6C0B1B2F1DD7F28F00AF0869 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */; };
+		6C4C80CA1DE6C8CF000EACDD /* 01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C805C1DE6C8CF000EACDD /* 01.wav */; };
+		6C4C80CB1DE6C8CF000EACDD /* 02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C805D1DE6C8CF000EACDD /* 02.wav */; };
+		6C4C80CC1DE6C8CF000EACDD /* 03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C805E1DE6C8CF000EACDD /* 03.wav */; };
+		6C4C80CD1DE6C8CF000EACDD /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C805F1DE6C8CF000EACDD /* 04.wav */; };
+		6C4C80CE1DE6C8CF000EACDD /* 05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80601DE6C8CF000EACDD /* 05.wav */; };
+		6C4C80CF1DE6C8CF000EACDD /* 06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80611DE6C8CF000EACDD /* 06.wav */; };
+		6C4C80D01DE6C8CF000EACDD /* 07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80621DE6C8CF000EACDD /* 07.wav */; };
+		6C4C80D11DE6C8CF000EACDD /* 08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80631DE6C8CF000EACDD /* 08.wav */; };
+		6C4C80D21DE6C8CF000EACDD /* 09.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80641DE6C8CF000EACDD /* 09.wav */; };
+		6C4C80D31DE6C8CF000EACDD /* 10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80651DE6C8CF000EACDD /* 10.wav */; };
+		6C4C80D41DE6C8CF000EACDD /* 11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80661DE6C8CF000EACDD /* 11.wav */; };
+		6C4C80D51DE6C8CF000EACDD /* beyond1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80681DE6C8CF000EACDD /* beyond1.wav */; };
+		6C4C80D61DE6C8CF000EACDD /* beyond2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80691DE6C8CF000EACDD /* beyond2.wav */; };
+		6C4C80D71DE6C8CF000EACDD /* beyond3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C806A1DE6C8CF000EACDD /* beyond3.wav */; };
+		6C4C80D81DE6C8CF000EACDD /* beyond4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C806B1DE6C8CF000EACDD /* beyond4.wav */; };
+		6C4C80D91DE6C8CF000EACDD /* cloud1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C806C1DE6C8CF000EACDD /* cloud1.wav */; };
+		6C4C80DA1DE6C8CF000EACDD /* cloud2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C806D1DE6C8CF000EACDD /* cloud2.wav */; };
+		6C4C80DB1DE6C8CF000EACDD /* cloud3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C806E1DE6C8CF000EACDD /* cloud3.wav */; };
+		6C4C80DC1DE6C8CF000EACDD /* cloud4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C806F1DE6C8CF000EACDD /* cloud4.wav */; };
+		6C4C80DD1DE6C8CF000EACDD /* machine1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80701DE6C8CF000EACDD /* machine1.wav */; };
+		6C4C80DE1DE6C8CF000EACDD /* machine2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80711DE6C8CF000EACDD /* machine2.wav */; };
+		6C4C80DF1DE6C8CF000EACDD /* machine3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80721DE6C8CF000EACDD /* machine3.wav */; };
+		6C4C80E01DE6C8CF000EACDD /* machine4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80731DE6C8CF000EACDD /* machine4.wav */; };
+		6C4C80E11DE6C8CF000EACDD /* space1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80741DE6C8CF000EACDD /* space1.wav */; };
+		6C4C80E21DE6C8CF000EACDD /* space2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80751DE6C8CF000EACDD /* space2.wav */; };
+		6C4C80E31DE6C8CF000EACDD /* space3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80761DE6C8CF000EACDD /* space3.wav */; };
+		6C4C80E41DE6C8CF000EACDD /* space4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C80771DE6C8CF000EACDD /* space4.wav */; };
+		6CA641681DD67B1D00CAA819 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA641671DD67B1D00CAA819 /* World.swift */; };
+		6CB132561DD65EE9000CF128 /* GameWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB132551DD65EE9000CF128 /* GameWindowController.swift */; };
+		6CB132581DD6603F000CF128 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB132571DD6603F000CF128 /* Sprite.swift */; };
+		6CB1325E1DD662E0000CF128 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1325D1DD662E0000CF128 /* GameScene.sks */; };
+		6CD3911B1DD6586000A70400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3911A1DD6586000A70400 /* AppDelegate.swift */; };
+		6CD391211DD6586000A70400 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD391201DD6586000A70400 /* GameScene.swift */; };
+		6CD391231DD6586000A70400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD391221DD6586000A70400 /* ViewController.swift */; };
+		6CD391251DD6586000A70400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD391241DD6586000A70400 /* Assets.xcassets */; };
+		6CD391281DD6586000A70400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD391261DD6586000A70400 /* Main.storyboard */; };
+		6CEADF711DD65BC700C49EFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEADF701DD65BC700C49EFA /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6C0B1AB21DD6D23B00AF0869 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		6C0B1AB41DD703CB00AF0869 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		6C0B1ABA1DD7A20200AF0869 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		6C0B1AD31DD7B5E600AF0869 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		6C0B1B2A1DD7EEDE00AF0869 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
+		6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
+		6C4C805C1DE6C8CF000EACDD /* 01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 01.wav; sourceTree = "<group>"; };
+		6C4C805D1DE6C8CF000EACDD /* 02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 02.wav; sourceTree = "<group>"; };
+		6C4C805E1DE6C8CF000EACDD /* 03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03.wav; sourceTree = "<group>"; };
+		6C4C805F1DE6C8CF000EACDD /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
+		6C4C80601DE6C8CF000EACDD /* 05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 05.wav; sourceTree = "<group>"; };
+		6C4C80611DE6C8CF000EACDD /* 06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06.wav; sourceTree = "<group>"; };
+		6C4C80621DE6C8CF000EACDD /* 07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07.wav; sourceTree = "<group>"; };
+		6C4C80631DE6C8CF000EACDD /* 08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 08.wav; sourceTree = "<group>"; };
+		6C4C80641DE6C8CF000EACDD /* 09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 09.wav; sourceTree = "<group>"; };
+		6C4C80651DE6C8CF000EACDD /* 10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 10.wav; sourceTree = "<group>"; };
+		6C4C80661DE6C8CF000EACDD /* 11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 11.wav; sourceTree = "<group>"; };
+		6C4C80681DE6C8CF000EACDD /* beyond1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beyond1.wav; sourceTree = "<group>"; };
+		6C4C80691DE6C8CF000EACDD /* beyond2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beyond2.wav; sourceTree = "<group>"; };
+		6C4C806A1DE6C8CF000EACDD /* beyond3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beyond3.wav; sourceTree = "<group>"; };
+		6C4C806B1DE6C8CF000EACDD /* beyond4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beyond4.wav; sourceTree = "<group>"; };
+		6C4C806C1DE6C8CF000EACDD /* cloud1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cloud1.wav; sourceTree = "<group>"; };
+		6C4C806D1DE6C8CF000EACDD /* cloud2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cloud2.wav; sourceTree = "<group>"; };
+		6C4C806E1DE6C8CF000EACDD /* cloud3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cloud3.wav; sourceTree = "<group>"; };
+		6C4C806F1DE6C8CF000EACDD /* cloud4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cloud4.wav; sourceTree = "<group>"; };
+		6C4C80701DE6C8CF000EACDD /* machine1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = machine1.wav; sourceTree = "<group>"; };
+		6C4C80711DE6C8CF000EACDD /* machine2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = machine2.wav; sourceTree = "<group>"; };
+		6C4C80721DE6C8CF000EACDD /* machine3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = machine3.wav; sourceTree = "<group>"; };
+		6C4C80731DE6C8CF000EACDD /* machine4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = machine4.wav; sourceTree = "<group>"; };
+		6C4C80741DE6C8CF000EACDD /* space1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = space1.wav; sourceTree = "<group>"; };
+		6C4C80751DE6C8CF000EACDD /* space2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = space2.wav; sourceTree = "<group>"; };
+		6C4C80761DE6C8CF000EACDD /* space3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = space3.wav; sourceTree = "<group>"; };
+		6C4C80771DE6C8CF000EACDD /* space4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = space4.wav; sourceTree = "<group>"; };
+		6CA641671DD67B1D00CAA819 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		6CB132551DD65EE9000CF128 /* GameWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameWindowController.swift; sourceTree = "<group>"; };
+		6CB132571DD6603F000CF128 /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
+		6CB1325D1DD662E0000CF128 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		6CD391171DD6586000A70400 /* Heavy Mountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heavy Mountain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD3911A1DD6586000A70400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CD391201DD6586000A70400 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		6CD391221DD6586000A70400 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CD391241DD6586000A70400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CD391271DD6586000A70400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CD391291DD6586000A70400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CEADF701DD65BC700C49EFA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CD391141DD6586000A70400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C0B1B1E1DD7CDE000AF0869 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				6CB132551DD65EE9000CF128 /* GameWindowController.swift */,
+				6CD3911A1DD6586000A70400 /* AppDelegate.swift */,
+				6CB1325D1DD662E0000CF128 /* GameScene.sks */,
+				6CD391221DD6586000A70400 /* ViewController.swift */,
+				6CD391241DD6586000A70400 /* Assets.xcassets */,
+				6CD391261DD6586000A70400 /* Main.storyboard */,
+				6CD391291DD6586000A70400 /* Info.plist */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		6C0B1B1F1DD7CDF300AF0869 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				6CEADF701DD65BC700C49EFA /* Constants.swift */,
+				6CD391201DD6586000A70400 /* GameScene.swift */,
+				6C0B1B2E1DD7F28F00AF0869 /* Hud.swift */,
+				6C0B1ABA1DD7A20200AF0869 /* MusicPlayer.swift */,
+				6C0B1AB41DD703CB00AF0869 /* Coin.swift */,
+				6C0B1B2A1DD7EEDE00AF0869 /* Key.swift */,
+				6C0B1B2B1DD7EEDE00AF0869 /* SoundEffect.swift */,
+				6C0B1AB21DD6D23B00AF0869 /* Player.swift */,
+				6CB132571DD6603F000CF128 /* Sprite.swift */,
+				6C0B1AD31DD7B5E600AF0869 /* Track.swift */,
+				6CA641671DD67B1D00CAA819 /* World.swift */,
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
+		6C4C80581DE6C8CF000EACDD /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C4C80591DE6C8CF000EACDD /* sound */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		6C4C80591DE6C8CF000EACDD /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				6C4C805B1DE6C8CF000EACDD /* music */,
+				6C4C80671DE6C8CF000EACDD /* sound-effects */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
+		6C4C805B1DE6C8CF000EACDD /* music */ = {
+			isa = PBXGroup;
+			children = (
+				6C4C805C1DE6C8CF000EACDD /* 01.wav */,
+				6C4C805D1DE6C8CF000EACDD /* 02.wav */,
+				6C4C805E1DE6C8CF000EACDD /* 03.wav */,
+				6C4C805F1DE6C8CF000EACDD /* 04.wav */,
+				6C4C80601DE6C8CF000EACDD /* 05.wav */,
+				6C4C80611DE6C8CF000EACDD /* 06.wav */,
+				6C4C80621DE6C8CF000EACDD /* 07.wav */,
+				6C4C80631DE6C8CF000EACDD /* 08.wav */,
+				6C4C80641DE6C8CF000EACDD /* 09.wav */,
+				6C4C80651DE6C8CF000EACDD /* 10.wav */,
+				6C4C80661DE6C8CF000EACDD /* 11.wav */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		6C4C80671DE6C8CF000EACDD /* sound-effects */ = {
+			isa = PBXGroup;
+			children = (
+				6C4C80681DE6C8CF000EACDD /* beyond1.wav */,
+				6C4C80691DE6C8CF000EACDD /* beyond2.wav */,
+				6C4C806A1DE6C8CF000EACDD /* beyond3.wav */,
+				6C4C806B1DE6C8CF000EACDD /* beyond4.wav */,
+				6C4C806C1DE6C8CF000EACDD /* cloud1.wav */,
+				6C4C806D1DE6C8CF000EACDD /* cloud2.wav */,
+				6C4C806E1DE6C8CF000EACDD /* cloud3.wav */,
+				6C4C806F1DE6C8CF000EACDD /* cloud4.wav */,
+				6C4C80701DE6C8CF000EACDD /* machine1.wav */,
+				6C4C80711DE6C8CF000EACDD /* machine2.wav */,
+				6C4C80721DE6C8CF000EACDD /* machine3.wav */,
+				6C4C80731DE6C8CF000EACDD /* machine4.wav */,
+				6C4C80741DE6C8CF000EACDD /* space1.wav */,
+				6C4C80751DE6C8CF000EACDD /* space2.wav */,
+				6C4C80761DE6C8CF000EACDD /* space3.wav */,
+				6C4C80771DE6C8CF000EACDD /* space4.wav */,
+			);
+			path = "sound-effects";
+			sourceTree = "<group>";
+		};
+		6CD3910E1DD6586000A70400 = {
+			isa = PBXGroup;
+			children = (
+				6CD391191DD6586000A70400 /* Heavy Mountain */,
+				6CD391181DD6586000A70400 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CD391181DD6586000A70400 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CD391171DD6586000A70400 /* Heavy Mountain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CD391191DD6586000A70400 /* Heavy Mountain */ = {
+			isa = PBXGroup;
+			children = (
+				6C4C80581DE6C8CF000EACDD /* resources */,
+				6C0B1B1E1DD7CDE000AF0869 /* app */,
+				6C0B1B1F1DD7CDF300AF0869 /* game */,
+			);
+			path = "Heavy Mountain";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CD391161DD6586000A70400 /* Heavy Mountain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CD3912C1DD6586000A70400 /* Build configuration list for PBXNativeTarget "Heavy Mountain" */;
+			buildPhases = (
+				6CD391131DD6586000A70400 /* Sources */,
+				6CD391141DD6586000A70400 /* Frameworks */,
+				6CD391151DD6586000A70400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Heavy Mountain";
+			productName = "Heavy Mountain";
+			productReference = 6CD391171DD6586000A70400 /* Heavy Mountain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CD3910F1DD6586000A70400 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Isaac Azuelos";
+				TargetAttributes = {
+					6CD391161DD6586000A70400 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9YKP257BLS;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 6CD391121DD6586000A70400 /* Build configuration list for PBXProject "Heavy Mountain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CD3910E1DD6586000A70400;
+			productRefGroup = 6CD391181DD6586000A70400 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CD391161DD6586000A70400 /* Heavy Mountain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CD391151DD6586000A70400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4C80D21DE6C8CF000EACDD /* 09.wav in Resources */,
+				6C4C80CF1DE6C8CF000EACDD /* 06.wav in Resources */,
+				6C4C80CB1DE6C8CF000EACDD /* 02.wav in Resources */,
+				6C4C80CA1DE6C8CF000EACDD /* 01.wav in Resources */,
+				6CB1325E1DD662E0000CF128 /* GameScene.sks in Resources */,
+				6C4C80D41DE6C8CF000EACDD /* 11.wav in Resources */,
+				6C4C80DD1DE6C8CF000EACDD /* machine1.wav in Resources */,
+				6C4C80D61DE6C8CF000EACDD /* beyond2.wav in Resources */,
+				6C4C80CE1DE6C8CF000EACDD /* 05.wav in Resources */,
+				6C4C80DF1DE6C8CF000EACDD /* machine3.wav in Resources */,
+				6C4C80E11DE6C8CF000EACDD /* space1.wav in Resources */,
+				6C4C80D11DE6C8CF000EACDD /* 08.wav in Resources */,
+				6C4C80DB1DE6C8CF000EACDD /* cloud3.wav in Resources */,
+				6C4C80D51DE6C8CF000EACDD /* beyond1.wav in Resources */,
+				6C4C80E31DE6C8CF000EACDD /* space3.wav in Resources */,
+				6CD391251DD6586000A70400 /* Assets.xcassets in Resources */,
+				6C4C80D01DE6C8CF000EACDD /* 07.wav in Resources */,
+				6C4C80E41DE6C8CF000EACDD /* space4.wav in Resources */,
+				6C4C80CC1DE6C8CF000EACDD /* 03.wav in Resources */,
+				6C4C80CD1DE6C8CF000EACDD /* 04.wav in Resources */,
+				6CD391281DD6586000A70400 /* Main.storyboard in Resources */,
+				6C4C80D31DE6C8CF000EACDD /* 10.wav in Resources */,
+				6C4C80D71DE6C8CF000EACDD /* beyond3.wav in Resources */,
+				6C4C80DC1DE6C8CF000EACDD /* cloud4.wav in Resources */,
+				6C4C80D91DE6C8CF000EACDD /* cloud1.wav in Resources */,
+				6C4C80DE1DE6C8CF000EACDD /* machine2.wav in Resources */,
+				6C4C80E01DE6C8CF000EACDD /* machine4.wav in Resources */,
+				6C4C80DA1DE6C8CF000EACDD /* cloud2.wav in Resources */,
+				6C4C80D81DE6C8CF000EACDD /* beyond4.wav in Resources */,
+				6C4C80E21DE6C8CF000EACDD /* space2.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CD391131DD6586000A70400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0B1ABB1DD7A20200AF0869 /* MusicPlayer.swift in Sources */,
+				6CB132581DD6603F000CF128 /* Sprite.swift in Sources */,
+				6C0B1AB51DD703CB00AF0869 /* Coin.swift in Sources */,
+				6C0B1B2F1DD7F28F00AF0869 /* Hud.swift in Sources */,
+				6CD391231DD6586000A70400 /* ViewController.swift in Sources */,
+				6CD391211DD6586000A70400 /* GameScene.swift in Sources */,
+				6C0B1B2C1DD7EEDE00AF0869 /* Key.swift in Sources */,
+				6CB132561DD65EE9000CF128 /* GameWindowController.swift in Sources */,
+				6CD3911B1DD6586000A70400 /* AppDelegate.swift in Sources */,
+				6CA641681DD67B1D00CAA819 /* World.swift in Sources */,
+				6C0B1AB31DD6D23B00AF0869 /* Player.swift in Sources */,
+				6C0B1B2D1DD7EEDE00AF0869 /* SoundEffect.swift in Sources */,
+				6CEADF711DD65BC700C49EFA /* Constants.swift in Sources */,
+				6C0B1AD41DD7B5E600AF0869 /* Track.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6CD391261DD6586000A70400 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CD391271DD6586000A70400 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CD3912A1DD6586000A70400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CD3912B1DD6586000A70400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		6CD3912D1DD6586000A70400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YKP257BLS;
+				INFOPLIST_FILE = "Heavy Mountain/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "website.trash.calcade.Heavy-Mountain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6CD3912E1DD6586000A70400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YKP257BLS;
+				INFOPLIST_FILE = "Heavy Mountain/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "website.trash.calcade.Heavy-Mountain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CD391121DD6586000A70400 /* Build configuration list for PBXProject "Heavy Mountain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD3912A1DD6586000A70400 /* Debug */,
+				6CD3912B1DD6586000A70400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CD3912C1DD6586000A70400 /* Build configuration list for PBXNativeTarget "Heavy Mountain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD3912D1DD6586000A70400 /* Debug */,
+				6CD3912E1DD6586000A70400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CD3910F1DD6586000A70400 /* Project object */;
+}
